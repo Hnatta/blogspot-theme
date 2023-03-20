@@ -1,0 +1,71 @@
+<span><!--more--></span>
+<!--[ Thumbnail ]-->
+<div class="separator" style="clear: both;">
+<a  style="display: block; padding: 1em 0px; text-align: center;" href="urlgambar">
+<img border="0" data-original-height="2988" data-original-width="5312" height="360"  width="640" src="urlgambar"/>
+</a></div>
+
+
+
+
+<!--[ Countdown Design ]-->
+<div data-uel='UEL' class='cdCont'>
+  <div class='cdHeadB'>
+    <div class='cdH'>Jumat 17 maret 2023</div>
+    <div class='cdD'>00:45 WIB</div>
+  </div>
+  <div class='cdHeadA'>
+    <div class='cdH'>Oops! Pertandingan sedang berlangsung.</div>
+    <div class='cdD'>Kamu dapat memuat ulang halaman ini.</div>
+    <a class='btn' href='#'>Reload</a>
+  </div>
+  <div class='cdTmr'>
+    <div class='cDown'>
+      <div class='cdBox'>
+        <span class='days'>00</span>
+        <span class='unit'>Hari</span>
+      </div>
+      <div class='cdBox'>
+        <span class='hours'>00</span>
+        <span class='unit'>Jam</span>
+      </div>
+      <div class='cdBox'>
+        <span class='minutes'>00</span>
+        <span class='unit'>Menit</span>
+      </div>
+      <div class='cdBox tv'>
+        <span class='seconds'>00</span>
+        <span class='unit'>Detik</span>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+<script>
+  /*<![CDATA[*/
+  /* Countdown Script */
+  const dayElm = document.querySelector('.cdBox .days'),
+    hourElm = document.querySelector('.cdBox .hours'),
+    minuteElm = document.querySelector('.cdBox .minutes'),
+    secondElm = document.querySelector('.cdBox .seconds'),
+    cdCont = document.querySelector('.cdCont'),
+    endDate = new Date('mar 17 2023 00:45:00 GMT+07:00');
+  
+  let eventEnded = !1;
+  const updateTimer = () => {
+    let e = new Date;
+    var t = endDate.getTime() - e.getTime();
+    t <= 1e3 && (eventEnded = !0);
+    var n = 36e5,
+      o = Math.floor(t / 864e5),
+      a = Math.floor(t % 864e5 / n),
+      n = Math.floor(t % n / 6e4),
+      t = Math.floor(t % 6e4 / 1e3);
+    dayElm.innerText = o < 10 ? '0' + o :o, hourElm.innerText = a < 10 ? '0' + a :a, minuteElm.innerText = n < 10 ? '0' + n :n, secondElm.innerText = t < 10 ? '0' + t :t
+  };
+  setInterval(() => {
+    eventEnded ? (cdCont.classList.add('ended')) : updateTimer()
+  }, 1e3);
+  /*]]>*/
+</script>
