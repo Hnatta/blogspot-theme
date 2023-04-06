@@ -6246,5 +6246,84 @@ function liveSearchDefer(){var d=document.createElement("script");d.src="https:/
 function liveSearchDefer(){var d=document.createElement("script");d.src="https://cdn.jsdelivr.net/gh/choipanwendy/ajaxS@main/live-search.js?live=true&amp;image=true&amp;url=https://www.manutdworld-live.blogspot.com",document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",liveSearchDefer,!1):window.attachEvent?window.attachEvent("onload",liveSearchDefer):window.onload=liveSearchDefer; function srcClr(){document.querySelector(".BlogSearch input").classList.remove("active"),document.querySelector(".ajax-search").classList.add("hidden")}function srcIcn(){document.querySelector(".BlogSearch input").classList.add("active")}document.addEventListener("DOMContentLoaded",function(){document.querySelector('input[name="q"]').addEventListener("focus",function(){document.querySelector(".ajax-search").classList.remove("hidden")})}),document.querySelector('button[type="reset"]').onclick=function(){srcClr()},document.querySelector(".fCls").onclick=function(){srcClr()},document.querySelector('label[for="searchIn"]').onclick=function(){srcIcn()};
 /*]]>*/</script>
     
+    <script>
+      const tabs = document.querySelectorAll(&quot;.scrollable-tabs-container a&quot;);
+const rightArrow = document.querySelector(
+  &quot;.scrollable-tabs-container .right-arrow svg&quot;
+);
+const leftArrow = document.querySelector(
+  &quot;.scrollable-tabs-container .left-arrow svg&quot;
+);
+const tabsList = document.querySelector(&quot;.scrollable-tabs-container ul&quot;);
+const leftArrowContainer = document.querySelector(
+  &quot;.scrollable-tabs-container .left-arrow&quot;
+);
+const rightArrowContainer = document.querySelector(
+  &quot;.scrollable-tabs-container .right-arrow&quot;
+);
+
+const removeAllActiveClasses = () =&gt; {
+  tabs.forEach((tab) =&gt; {
+    tab.classList.remove(&quot;active&quot;);
+  });
+};
+
+tabs.forEach((tab) =&gt; {
+  tab.addEventListener(&quot;click&quot;, () =&gt; {
+    removeAllActiveClasses();
+    tab.classList.add(&quot;active&quot;);
+  });
+});
+
+const manageIcons = () =&gt; {
+  if (tabsList.scrollLeft &gt;= 20) {
+    leftArrowContainer.classList.add(&quot;active&quot;);
+  } else {
+    leftArrowContainer.classList.remove(&quot;active&quot;);
+  }
+
+  let maxScrollValue = tabsList.scrollWidth - tabsList.clientWidth - 20;
+  console.log(&quot;scroll width: &quot;, tabsList.scrollWidth);
+  console.log(&quot;client width: &quot;, tabsList.clientWidth);
+
+  if (tabsList.scrollLeft &gt;= maxScrollValue) {
+    rightArrowContainer.classList.remove(&quot;active&quot;);
+  } else {
+    rightArrowContainer.classList.add(&quot;active&quot;);
+  }
+};
+
+rightArrow.addEventListener(&quot;click&quot;, () =&gt; {
+  tabsList.scrollLeft += 200;
+  manageIcons();
+});
+
+leftArrow.addEventListener(&quot;click&quot;, () =&gt; {
+  tabsList.scrollLeft -= 200;
+  manageIcons();
+});
+
+tabsList.addEventListener(&quot;scroll&quot;, manageIcons);
+
+let dragging = false;
+
+const drag = (e) =&gt; {
+  if (!dragging) return;
+  tabsList.classList.add(&quot;dragging&quot;);
+  tabsList.scrollLeft -= e.movementX;
+};
+
+tabsList.addEventListener(&quot;mousedown&quot;, () =&gt; {
+  dragging = true;
+});
+
+tabsList.addEventListener(&quot;mousemove&quot;, drag);
+
+document.addEventListener(&quot;mouseup&quot;, () =&gt; {
+  dragging = false;
+  tabsList.classList.remove(&quot;dragging&quot;);
+});
+    </script>
+    
     &lt;!--</body>--&gt;&lt;/body&gt;
 </html>
