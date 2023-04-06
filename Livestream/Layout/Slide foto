@@ -1,0 +1,55 @@
+<div id="slider" dir="ltr">
+	<div id="slides" class="slides">
+    
+
+<div class="item">
+			<div class="backdrop" style="background-image:url('https://assets.manutd.com/AssetPicker/images/0/0/18/103/1206221/SAF_Hall_of_Fame_Inductee_Article_hedaer1680078187285_xlarge.webp')"></div>	
+		</div>
+
+
+              		<div class="item">
+			<div class="backdrop" style="background-image:url('https://assets.manutd.com/AssetPicker/images/0/0/13/240/913419/UE_Notext_Article-Header-11594207426242_large.jpg')"></div>	
+		</div>
+              
+<div class="item">
+			<div class="backdrop" style="background-image:url('https://assets.manutd.com/AssetPicker/images/0/0/13/210/905938/OT_view_UN-14-cropped-11588674007764_large.jpg')"></div>
+		</div>
+
+<div class="item">
+			<div class="backdrop" style="background-image:url('https://assets.manutd.com/AssetPicker/images/0/0/17/106/1141450/GettyImages_14208441201662471639973_large.jpg')"></div>
+		</div>
+
+<div class="item">
+			<div class="backdrop" style="background-image:url('https://assets.manutd.com/AssetPicker/images/0/0/12/97/811443/MU_LCFC_EUN-1051568818091963_large.jpg')"></div>
+		</div>
+  
+		<div class="item">
+			<div class="backdrop" style="background-image:url('https://assets.manutd.com/AssetPicker/images/0/0/11/206/773652/GettyImages-112702337421551012633048_large.jpg')"></div>
+		</div>
+              
+		<div class="item">
+			<div class="backdrop" style="background-image:url('https://assets.manutd.com/AssetPicker/images/0/0/16/20/1053937/Unknown_11642432459832_large.jpg')"></div>
+	</div>
+              
+
+		<div class="item">
+			<div class="backdrop" style="background-image:url('https://assets.manutd.com/AssetPicker/images/0/0/13/9/854438/UETrinity1572265619352_medium.jpg')"></div>
+	</div>
+
+	<div id="left-button">
+		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="44" height="44" viewbox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+			<line x1="5" y1="12" x2="19" y2="12"></line>
+			<line x1="5" y1="12" x2="9" y2="16"></line>
+			<line x1="5" y1="12" x2="9" y2="8"></line>
+		</svg>
+	</div>
+	<div id="right-button">
+		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="44" height="44" viewbox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+			<line x1="5" y1="12" x2="19" y2="12"></line>
+			<line x1="15" y1="16" x2="19" y2="12"></line>
+			<line x1="15" y1="8" x2="19" y2="12"></line>
+		</svg>
+	</div>
+</div></div>
