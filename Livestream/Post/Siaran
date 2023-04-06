@@ -1,0 +1,389 @@
+<span><!--more--></span>
+<!--[ Thumbnail ]-->
+
+<div class="separator" style="clear: both;">
+<a  style="display: block; padding: 1em 0px; text-align: center;">
+<img border="0" data-original-height="2988" data-original-width="5312" height="360"  width="640" src=""/>
+</a></div>
+
+
+
+<!--[ Synopsis ]-->
+
+<p id="synopsis"></p>
+
+
+<!--[ Extra information ]-->
+
+
+
+<!--[ Streaming Player ]-->
+
+<div id="shadow"></div>
+<div class="DagPlaArea DagTo">
+  <div id="PlayVideo" class="video-content">
+    <div id="embed_holder">
+      <div class="player-embed" id="pembed">
+        <div class="playerload"></div>
+        <div id="player_embed">
+          <div class="pframe"><iframe src="" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO"
+              width="100%" height="100%" allowfullscreen="true" webkitallowfullscreen="true"
+              mozallowfullscreen="true"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="video-nav">
+    <div class="itemleft">
+      <div class="icon DagLight">
+        <svg viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M20,11H23V13H20V11M1,11H4V13H1V11M13,1V4H11V1H13M4.92,3.5L7.05,5.64L5.63,7.05L3.5,4.93L4.92,3.5M16.95,5.63L19.07,3.5L20.5,4.93L18.37,7.05L16.95,5.63M12,6A6,6 0 0,1 18,12C18,14.22 16.79,16.16 15,17.2V19A1,1 0 0,1 14,20H10A1,1 0 0,1 9,19V17.2C7.21,16.16 6,14.22 6,12A6,6 0 0,1 12,6M14,21V22A1,1 0 0,1 13,23H11A1,1 0 0,1 10,22V21H14M11,18H13V15.87C14.73,15.43 16,13.86 16,12A4,4 0 0,0 12,8A4,4 0 0,0 8,12C8,13.86 9.27,15.43 11,15.87V18Z" />
+        </svg>
+        <span>Mode Fokus</span>
+      </div>
+      <div class="icon DagShre">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M3 3h6v2H5v4H3V3z" fill="currentColor"/><path d="M3 21h6v-2H5v-4H3v6z" fill="currentColor"/><path d="M15 21h6v-6h-2v4h-4v2z" fill="currentColor"/><path d="M21 3h-6v2h4v4h2V3z" fill="currentColor"/></g></svg>
+        <a href="#PlayVideo">Ubah Tampilan</a>
+      </div> 
+    </div>
+  </div>
+</div>
+
+
+
+<!--[ Streaming Server ]-->
+
+<div class="server_option">
+  <div class="tabs servers">
+    <span class="tablinks" id="serverOpen" onclick="openCity(event, 'LIVE XE')">LIVE XE</span>
+    <span class="tablinks" id="serverOpen" onclick="openCity(event, 'LIVE TC')">LIVE TC</span>
+    <span class="tablinks" id="serverOpen" onclick="openCity(event, 'LIVE SKY')">LIVE SKY</span>
+    <span class="tablinks" id="serverOpen" onclick="openCity(event, 'LIVE BT SPORT')">LIVE BT SPORT</span>
+    <span class="tablinks" id="serverOpen" onclick="openCity(event, 'LIVE BEIN')">LIVE BEIN</span>
+    <span class="tablinks" id="serverOpen" onclick="openCity(event, 'LIVE DAZN')">LIVE DAZN</span>
+    
+    
+  </div>
+  <div id="server">
+    <ul id="LIVE XE" class="serverEpisode">
+      <li>
+        <div class="DagPlayOpt" data-embed="https://www.youtube.com/embed/xldghQlUN4w/embed?" data-id="Server-1">
+          <span>Pilih Server</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv01.php?autostart=true" data-id="Server-1">
+          <span>XE 1</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv02.php?autostart=true" data-id="Server-1">
+          <span>XE 2</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv03.php?autostart=true" data-id="Server-1">
+          <span>XE 3</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv04.php?autostart=true" data-id="Server-1">
+          <span>XE 4</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv05.php?autostart=true" data-id="Server-1">
+          <span>XE 5</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv06.php?autostart=true" data-id="Server-1">
+          <span>XE 6</span> 
+        </div>
+      </li>     <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv07.php?autostart=true" data-id="Server-1">
+          <span>XE 7</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv08.php?autostart=true" data-id="Server-1">
+          <span>XE 8</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv09.php?autostart=true" data-id="Server-1">
+          <span>XE 9</span> 
+        </div>
+      </li>     <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv10.php?autostart=true" data-id="Server-1">
+          <span>XE 10</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv11.php?autostart=true" data-id="Server-1">
+          <span>XE 11</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv12.php?autostart=true" data-id="Server-1">
+          <span>XE 12</span> 
+        </div>
+      </li>     <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv13.php?autostart=true" data-id="Server-1">
+          <span>XE 13</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv14.php?autostart=true" data-id="Server-1">
+          <span>XE 14</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv15.php?autostart=true" data-id="Server-1">
+          <span>XE 15</span> 
+        </div>
+      </li>     <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv16.php?autostart=true" data-id="Server-1">
+          <span>XE 16</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv17.php?autostart=true" data-id="Server-1">
+          <span>XE 17</span> </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv18.php?autostart=true" data-id="Server-1">
+          <span>XE 18</span> 
+        </div>
+      </li>     <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv19.php?autostart=true" data-id="Server-1">
+          <span>XE 19</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv20.php?autostart=true" data-id="Server-1">
+          <span>XE 20</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv21.php?autostart=true" data-id="Server-1">
+          <span>XE 21</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv22.php?autostart=true" data-id="Server-1">
+          <span>XE 22</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv23.php?autostart=true" data-id="Server-1">
+          <span>XE 23</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv24.php?autostart=true" data-id="Server-1">
+          <span>XE 24</span> 
+        </div>
+      </li>     <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv25.php?autostart=true" data-id="Server-1">
+          <span>XE 25</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv26.php?autostart=true" data-id="Server-1">
+          <span>XE 26t</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv27.php?autostart=true" data-id="Server-1">
+          <span>XE 27</span> 
+        </div>
+      </li>     <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv28.php?autostart=true" data-id="Server-1">
+          <span>XE 28</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv29.php?autostart=true" data-id="Server-1">
+          <span>XE 29</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://xestreams.com/livetv/tv30.php?autostart=true" data-id="Server-1">
+          <span>XE 30</span> 
+        </div>
+      </li>
+     </ul>
+    <ul id="LIVE TC" class="serverEpisode">
+      <li>
+        <div class="DagPlayOpt" data-embed="https://techclips.net/clip/s1.html" data-id="Server-1">
+          <span>TC 1</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://techclips.net/clip/s2.html" data-id="Server-1">
+          <span>TC 2</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://techclips.net/clip/s3.html" data-id="Server-1">
+          <span>TC 3</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://techclips.net/clip/s4.html" data-id="Server-1">
+          <span>TC 4</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://techclips.net/clip/s5.html" data-id="Server-1">
+          <span>TC 5</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://techclips.net/clip/s6.html" data-id="Server-1">
+          <span>TC 6</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://techclips.net/clip/s7.html" data-id="Server-1">
+          <span>TC 7</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://techclips.net/clip/s8.html" data-id="Server-1">
+          <span>TC 8</span>
+        </div>
+      </li>
+        <li>
+        <div class="DagPlayOpt" data-embed="https://techclips.net/clip/s9.html" data-id="Server-1">
+          <span>TC 9</span>
+        </div>
+      </li>
+             <li>
+        <div class="DagPlayOpt" data-embed="https://techclips.net/clip/s10.html" data-id="Server-1">
+          <span>TC 10</span>
+        </div>
+      </li>
+    </ul>
+    <ul id="LIVE SKY" class="serverEpisode">
+      <li>
+        <div class="DagPlayOpt" data-embed="https://stream.crichd.vip/update/skys1.php" data-id="Server-1">
+          <span>Sky 1</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://stream.crichd.vip/update/skys2.php" data-id="Server-1">
+          <span>Sky 2</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://stream.crichd.vip/update/skys3.php" data-id="Server-1">
+          <span>Sky 3</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://stream.crichd.vip/update/skys4.php" data-id="Server-1">
+          <span>Sky 4</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://stream.crichd.vip/update/skys5.php" data-id="Server-1">
+          <span>Sky 5</span> 
+        </div>
+      </li>
+    </ul>
+    <ul id="LIVE BT SPORT" class="serverEpisode">
+      <li>
+        <div class="DagPlayOpt" data-embed="//stream.crichd.vip/update/bt1.php" data-id="Server-1">
+          <span>BT SPORT 1</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="//stream.crichd.vip/update/bt2.php" data-id="Server-1">
+          <span>BT SPORT 2</span> 
+        </div>
+      </li>
+      </ul>
+      <ul id="LIVE BEIN" class="serverEpisode">
+      <li>
+        <div class="DagPlayOpt" data-embed="https://habotv.github.io/live/daznb1" autoplay autostart="true" data-id="Server-1">
+          <span>BEIN </span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://habotv.github.io/live/daznb2" autoplay autostart="true" data-id="Server-1">
+          <span>BEIN 1</span> 
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://habotv.github.io/live/daznb3" autoplay autostart="true" data-id="Server-1">
+          <span>BEIN 2</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://habotv.github.io/live/daznb4" autoplay autostart="true" data-id="Server-1">
+          <span>BEIN 3</span> 
+        </div>
+      </li>
+      </ul>
+      <ul id="LIVE DAZN" class="serverEpisode">
+      <li>
+        <div class="DagPlayOpt" data-embed="https://habotv.github.io/live/dazn1de.html" autoplay autostart="true" data-id="Server-1">
+          <span>DAZN 1</span>
+        </div>
+      </li>
+      <li>
+        <div class="DagPlayOpt" data-embed="https://habotv.github.io/live/dazn2de.html" autoplay autostart="true" data-id="Server-1">
+          <span>DAZN 2</span> 
+        </div>
+      </li>
+      </ul>
+    
+  </div>
+</div>
+
+
+<!-- HTML -->
+<div id="postLocker" oncontextmenu="return false">
+  <div class="lockerContainer" id="postLock">
+    <div class="lockerTitle">TERKUNCI</div>
+    <div class="lockerDescription">Login sebelum membuka halaman!</div>
+    <input id="lockerPassword" type="text" placeholder="Ketik sandi anda di sini..." onkeydown="if(event.keyCode==13)postLock()"/>
+    <div class="lockerButton" onclick="postLock()"><i class="mainIcon lockIcon"></i>Login</div>
+    <div class="lockerOut">
+      <a href="/search" title="Homepage">Back to homepage</a>
+    </div>
+  </div>
+</div>
+<div id="lockerContent" class="contentHide"/>
+<!-- End HTML --
+
+
+<!-- CSS -->
+<style>
+/* Post Locker by www.ferisp.com */
+#postLocker{position:fixed;width:100%;height:100%;background:#131417;font-family:"Noto Sans",sans-serif;top:0;left:0;right:0;bottom:0;z-index:999}
+.lockerContainer{position:relative;width:35%;background:#252830;top:50%;left:50%;padding:30px;transform:translate(-50%,-50%);border-radius:15px;box-shadow:0 0 30px 0 rgba(0,0,0,.7)}
+#lockerPassword{width:100%;background:rgba(255,255,255,.1);color:#eee;margin-bottom:7px;padding:10px}
+#lockerPassword::placeholder{color:#888;font-size:14px}
+.lockerTitle{color:#aaa;font-size:45px;font-weight:bold;margin-top:10px;margin-left:-3.5px}
+.lockerDescription{color:#eee;font-size:14px;margin:15px 0}
+.lockerOut a{color:#bbb;font-size:12px}
+.lockerOut a:hover{color:#aaa}
+.contentHide{display:none}
+.lockerButton{display:inline-flex;background:#009ee0;color:#eee;font-size:13px;line-height:22px;align-items:center;margin:15px 0 10px 0;padding:10px 20px 10px 15px;outline:0;border:0;border-radius:0 30px 30px 30px;cursor:pointer}
+.lockerButton:hover{background:#068ac2}
+.mainIcon{display:inline-block;width:18px;height:18px;margin-right:12px;background-size:cover;background-repeat:no-repeat;background-position:center center}
+.mainIcon.lockIcon{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23eeeeee' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'><g transform='translate(3.500000, 2.000000)'><path d='M12.9709,7.4033 L12.9709,5.2543 C12.9399,2.7353 10.8719,0.7193 8.3539,0.7503 C5.8869,0.7813 3.8919,2.7673 3.8499,5.2343 L3.8499,7.4033'></path><line x1='8.4103' y1='12.1562' x2='8.4103' y2='14.3772'></line><path d='M8.4103,6.8242 C2.6653,6.8242 0.7503,8.3922 0.7503,13.0952 C0.7503,17.7992 2.6653,19.3672 8.4103,19.3672 C14.1553,19.3672 16.0713,17.7992 16.0713,13.0952 C16.0713,8.3922 14.1553,6.8242 8.4103,6.8242 Z'></path></g></svg>")}
+@media screen and (max-width:700px){.lockerContainer{width:95%;border-radius:3px}}
+</style>
+<!-- End CSS -->
+
+<!-- JavaScript -->
+<script>
+function postLock(){if(document.getElementById("lockerPassword").value==="locked"){document.getElementById("lockerContent").classList.remove("contentHide");document.getElementById("postLocker").classList.add("contentHide")}else{alert("Wrong Password!");lockerPassword.setSelectionRange(0,lockerPassword.value.length)}return false}
+</script>
+<!-- End JavaScript -->
