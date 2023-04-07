@@ -3,8 +3,6 @@
 <html b:css='false' b:defaultwidgetversion='2' b:js='true' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
   	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'/>
-    <!--reaksi sharethis-->
-    <script async='async' src='https://platform-api.sharethis.com/js/sharethis.js#property=64060d857044f9001991c217&amp;#38;product=inline-reaction-buttons' type='text/javascript'/>
     <!-- Meta Umum -->
     <b:include data='blog' name='google-analytics'/>
 	<meta content='width=device-width,initial-scale=1' name='viewport'/>
@@ -77,26 +75,25 @@
 <Variable name="content.width" description="Content width" type="length" min="600px" max="2400px" default="1460px"  value="1461px"/>
 </Group>
 <Group description="Status Color" selector=".poster">
-<Variable name="ep" description="Episode" type="color" default="#ff3800"  value="#16140f"/>
-<Variable name="dub" description="Dub" type="color" default="#c39d00"  value="#010245"/>
-<Variable name="tv" description="TV" type="color" default="#007bff"  value="#e6000b"/>
-<Variable name="movie" description="Movie" type="color" default="#00a247"  value="#298b01"/>
-<Variable name="special" description="Special" type="color" default="#d45558"  value="#0406b0"/>
-<Variable name="ova" description="OVA" type="color" default="#0094ac"  value="#ed8417"/>
-<Variable name="ona" description="ONA" type="color" default="#0061aa"  value="#70045c"/>
-<Variable name="id" description="Language ID" type="color" default="#ff2800"  value="#16140f"/>
-
-<Variable name="bin" description="Bin" type="color" default="#c39d00"  value="#ffffff"/>
+<Variable name="tv" description="TV" type="color" default="#007bff"  value="#0c00e6"/>
+<Variable name="movie" description="Movie" type="color" default="#00a247"  value="#000000"/>
+<Variable name="video" description="VIDEO" type="color" default="#0094ac"  value="#001c55"/>
+<Variable name="ova" description="OVA" type="color" default="#0094ac"  value="#001c55"/>
+<Variable name="ona" description="ONA" type="color" default="#0061aa"  value="#00034c"/>
+<Variable name="special" description="Special" type="color" default="#d45558"  value="#d08d47"/>
+<Variable name="id" description="Language ID" type="color" default="#ff2800"  value="#e69e00"/>
 <Variable name="jp" description="Language JP" type="color" default="#ff6c00"  value="#e6dc00"/>
 <Variable name="en" description="Language EN" type="color" default="#cc00cc"  value="#9f004a"/>
+<Variable name="ep" description="Episode" type="color" default="#ff3800"  value="#e6ad00"/>
+<Variable name="dub" description="Dub" type="color" default="#c39d00"  value="#5f8f00"/>
 <Variable name="score" description="Score" type="color" default="#8a2be2"  value="#d91ecf"/>
-
 <Variable name="epl" description="Epl" type="color" default="#c39d00"  value="#010245"/>
 <Variable name="fa" description="FA" type="color" default="#007bff"  value="#e6000b"/>
 <Variable name="lc" description="Lc" type="color" default="#00a247"  value="#298b01"/>
 <Variable name="ucl" description="Ucl" type="color" default="#d45558"  value="#0406b0"/>
 <Variable name="uel" description="Uel" type="color" default="#0094ac"  value="#ed8417"/>
 <Variable name="exb" description="Exb" type="color" default="#0061aa"  value="#70045c"/>
+<Variable name="leg" description="Leg" type="color" default="#0061aa"  value="#121212"/>
 </Group>
 <Group description="Border Radius">
 <Variable name="b.r" description="Content width" type="length" min="0px" max="20px" default="4px"  value="4px"/>
@@ -207,7 +204,7 @@ input{accent-color:$(keycolor);}
 @keyframes tooltipster-rotating{25%{transform:rotate(-2deg);}75%{transform:rotate(2deg);}100%{transform:rotate(0);}}
 @keyframes tooltipster-scaling{50%{transform:scale(1.1);}100%{transform:scale(1);}}
 [tabindex="-1"]:focus:not(:focus-visible){outline:0!important;}
-h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;color: white;}}
+h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;}
 ul ul{margin-bottom:0;}
 a{color:#a885da;text-decoration:none;background-color:transparent;transition:all .15s;}
 a:not([href]):not([class]){color:inherit;text-decoration:none;}
@@ -248,98 +245,6 @@ input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}
 .btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active{color:#fff;background-color:#432271;border-color:#3d1f67;}
 .btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus{box-shadow:0 0 0 .2rem rgba(115,77,167,.5);}
 @keyframes progress-bar-stripes{from{background-position:1rem 0;}to{background-position:0 0;}}
-
-/* scrollable */
-.scrollable-tabs-container {
-  font-family: "Roboto", sans-serif;
-  background: #000;
-  max-width: 700px;
-  margin: 16px auto;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-}
-
-.scrollable-tabs-container svg {
-  width: 24px;
-  height: 24px;
-  padding: 8px;
-  cursor: pointer;
-  color: #fff;
-  border-radius: 50%;
-  pointer-events: auto;
-}
-
-.scrollable-tabs-container ul {
-  display: flex;
-  gap: 16px;
-  padding: 12px 24px;
-  margin: 0;
-  list-style: none;
-  overflow-x: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-}
-
-.scrollable-tabs-container ul.dragging a {
-  pointer-events: none;
-}
-
-.scrollable-tabs-container ul.dragging {
-  scroll-behavior: auto;
-}
-
-.scrollable-tabs-container ul::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollable-tabs-container a {
-  color: #fff;
-  text-decoration: none;
-  background: #333;
-  padding: 4px 24px;
-  display: inline-block;
-  border-radius: 4px;
-  user-select: none;
-  white-space: nowrap;
-}
-
-.scrollable-tabs-container a.active {
-  background: #fff;
-  color: #000;
-}
-
-.scrollable-tabs-container .right-arrow,
-.scrollable-tabs-container .left-arrow {
-  position: absolute;
-  height: 100%;
-  width: 100px;
-  top: 0;
-  display: none;
-  align-items: center;
-  padding: 0 10px;
-  pointer-events: none;
-}
-
-.scrollable-tabs-container .right-arrow.active,
-.scrollable-tabs-container .left-arrow.active {
-  display: flex;
-}
-
-.scrollable-tabs-container .right-arrow {
-  right: 0;
-  background: linear-gradient(to left, #000 50%, transparent);
-  justify-content: flex-end;
-}
-
-.scrollable-tabs-container .left-arrow {
-  background: linear-gradient(to right, #000 50%, transparent);
-}
-
-.scrollable-tabs-container svg:hover {
-  background: #333;
-}
 
 /* Modal Box */
 
@@ -443,6 +348,7 @@ header #logo a:hover {color:$(keycolor)}
 .header-image-wrapper img{transition:.3s;max-height:50px;}
 header #logo h1{display:block;width:100%;height:100%;margin:0;padding:0;}
 header #logo a{display:block;width:100%;height:100%;position:relative;}
+/* search */
 header #search-toggler{display:none;}
 header #search{width:23.9rem;}
 header #search form{position:relative;width:100%;}
@@ -463,7 +369,11 @@ header .socials>a:hover{color:#ccc;}
 @media screen and (max-width:1279px){header #search{width:320px;}}
 @media screen and (max-width:992px){header .socials svg{width: 25px;height: 25px;}.header-image-wrapper img {max-height: 30px;}header #logo {display: flex;align-items: center;}}
 @media screen and (max-width:768px){header #user{display:flex;}header #user .guest .btn{padding:0;width:35px;height:35px;line-height:35px;border-radius:50%;max-width:auto;min-width:auto;}header #user .guest .btn:after{font-family:"Font Awesome 5 Free";content:"i";font-weight:900;}header #user .guest .btn span{font-size:0;}header #user .user{min-width:auto;width:35px;height:35px;text-overflow:unset;line-height:35px;padding:0;}header #user .user span{font-size:0;display:none;}header #user .user:after{font-family:"Font Awesome 5 Free";content:"";font-weight:900;}}
-@media screen and (max-width:576px){header #search-toggler{font-size:1.7em;display:inline-block;margin-right:10px;margin-top:3px;}header #search{position:absolute;left:0;top:100%;z-index:10;width:100%;display:none;margin-top:10px;}header #search form{margin:0 15px;width:auto;}header #search form input{background:var(--dark);color:#fff;}header #search form input::placeholder{color:#ababab;}header #search form input:focus,header #search form input:hover{background:#5a2e98;color:#fff;}header #search form button{color:#fff!important;}header #menu{position:static;}header #menu .menu{left:15px;right:15px;top:100%;z-index:10;}header #menu .menu>ul{width:100%;border-radius:.3rem;overflow:hidden;}header #menu .menu>ul>li:after,header #menu .menu>ul>li:before{display:none!important;}header #menu .menu>ul>li>a{line-height:45px;height:45px;border-bottom:1px solid #4e2884;}header #menu .menu>ul>li>ul{position:static;left:0;width:auto;font-size:1.06em;display:none;width:100%!important;padding:5px 0;}header #menu .menu>ul>li>ul>li a{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 15px;}}
+@media screen and (max-width:576px){header #search-toggler{font-size:1.7em;display:inline-block;margin-right:10px;margin-top:3px;}header #search{position:absolute;left:0;top:100%;z-index:10;width:100%;display:none;margin-top:10px;}header #search form{margin:0 15px;width:auto;}header #search form input{background:var(--dark);color:#fff;}header #search form input::placeholder{color:#ababab;}header #search form input:focus,header #search form input:hover{background:#5a2e98;color:#fff;}header #search form button{color:#fff!important;}header #menu{position:static;}header #menu
+@media screen and (max-width:1279px){header #search{width:320px;}}
+@media screen and (max-width: 315px)header #search-toggler {font-size: 1.7em;display: inline-block;margin-right: 10px;margin-top: 3px;}
+
+.menu{left:15px;right:15px;top:100%;z-index:10;}header #menu .menu>ul{width:100%;border-radius:.3rem;overflow:hidden;}header #menu .menu>ul>li:after,header #menu .menu>ul>li:before{display:none!important;}header #menu .menu>ul>li>a{line-height:45px;height:45px;border-bottom:1px solid #4e2884;}header #menu .menu>ul>li>ul{position:static;left:0;width:auto;font-size:1.06em;display:none;width:100%!important;padding:5px 0;}header #menu .menu>ul>li>ul>li a{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 15px;}}
 .search .suggestions{position:absolute;top:100%;width:100%;margin-top:5px;z-index:10;background:var(--secondary);border-radius:10px;overflow:hidden;box-shadow:0 2px 10px var(--secondary);display:none;}
 .search .suggestions a{display:block;width:100%;padding:10px;}
 .search .suggestions a:after{display:block;clear:both;content:"";}
@@ -496,12 +406,11 @@ input[type=radio]:not(.simple):checked:before{content:"";background:#fff;positio
 a:hover {color: var(--link-hover);}
 /* Layout */
 .grid,.sv .gtc-3fr,#main {display: grid}
-.flex,#PageList1,#header {display: flex;justify-content: flex-start;}
+.flex,#PageList1,#header {display: flex}
 .i-flex {display: inline-flex;}
 .block,header #search.block {display: block}
 .float-r,.more {float: right}
-/* Dalam Gambar LD */
-.none, .separator,.not\[Ep\] :not([data*="Pekan"],[data*="Besar"],[data*="Final"],[data*="Putaran"],[data*="Grup"]),.stream #synopsis,.tabcontent {display: none}
+.none, .separator,.not\[Ep\] :not([data*="Ep"],[data*="Raw"],[data*="Censored"],[data*="Uncensored"],[data*="Preview"],[data*="Pekan"],[data*="Besar"],[data*="Final"],[data*="Putaran"],[data*="Grup"]),.stream #synopsis,.tabcontent {display: none}
 .oh,.r-snippetized,#main .widget {overflow: hidden}
 .ofc img {object-fit: cover}
 .wsn {white-space: nowrap}
@@ -510,7 +419,6 @@ a:hover {color: var(--link-hover);}
 .z-1 {z-index: 1}
 .z-10 {z-index: 10}
 .z-20 {z-index: 20}
-.flexe,#PageList1,#header {display: flex;flex-wrap: wrap;justify-content: end;}
 
 /* Box Alignment */
 .aic,#PageList1,#header {align-items: center}
@@ -645,9 +553,6 @@ gap:var(--size)}
 .top\:before::before {content: '';position: absolute;left: 50%;margin-left: -50vw;top: 0;width: 100vw;background-color: var(--gray);height: 100%}
 
 /* Typography */
-.c-mu-h {color: #c70101;}
-.c-mu-a {color: #ffffff;}
-.c-mu-t {color: #1b00ff;}
 .text-1rem,.pager-js a,.s-media li {font-size: 1rem}
 .text-2 {font-size: 2rem}
 #description h3,#main h3.title {font-size: 1.25rem}
@@ -762,8 +667,8 @@ footer .parlgrm{background:#8c8c8c;}
 body.homepage-view .hero-image.has-image{background:$(body.background);background-attachment:fixed;background-repeat:no-repeat;background-size:contain;background-blend-mode:overlay;}
 
 /* Tabs */
-.tabs .tablinks{color:var(--white);cursor:pointer;padding:2px 5px;border-radius:.25rem;font-weight:500;font-size:.98em;-webkit-transition:all .15s;-moz-transition:all .15s;transition:all .15s;}
-.tabs .tablinks.active{color:var(--red);}
+.tabs .tablinks{color:#525252;cursor:pointer;padding:2px 5px;border-radius:.25rem;font-weight:500;font-size:.98em;-webkit-transition:all .15s;-moz-transition:all .15s;transition:all .15s;}
+.tabs .tablinks.active{color:var(--light-gray);}
 
 /* More */
 .tags .more{float: none}
@@ -805,7 +710,6 @@ figure.widget-content .slider{scroll-snap-align:center;}
 .iv .published{font-size:1rem;padding-left:1rem;border-left:3px solid $(keycolor);line-height:1.5rem;margin-bottom:1rem;display:block;color:white;}
 [dir="rtl"] .published{border-right:3px solid $(keycolor);border-left:none;}
 .iv .published::before{content:attr(title);display:block;color:$(keycolor);font-size:.65rem;text-transform:uppercase;letter-spacing:1px;line-height:1rem;}
-
 
 /* Progress */
 .progress{margin-bottom:1rem;position:relative;}
@@ -868,19 +772,19 @@ table{width:100%;}
 .en{background:$(en)}
 .jp{background:$(jp)}
 .ova,.OVA{background:$(ova) !important}
+.video,.Video{background:$(video) !important}
 .movie,.Movie{background:$(movie) !important}
 .ona,.ONA{background:$(ona) !important}
 .special,.Special{background:$(special) !important}
-
+.tag.ep{left:0;background:#5a2e98;border-bottom-right-radius:8px;}
+.tag{top:0;font-size:.85em;padding:2px 6px 0;color:#eee;}
 .uel,.Uel{background:$(uel) !important}
 .lc,.Lc{background:$(lc) !important}
 .exb,.Exb{background:$(exb) !important}
 .ucl,.Ucl{background:$(ucl) !important}
 .epl,.Epl{background:$(epl) !important}
 .fa,.Fa{background:$(fa) !important}
-
-.tag.ep{left:0;background:#5a2e98;border-bottom-right-radius:8px;}
-.tag{top:0;font-size:.85em;padding:2px 6px 0;color:#eee;}
+.leg,.Leg{background:$(leg) !important}
 
 .DagTo{margin-bottom:25px;width:100%;background:var(--gray-dark);border-radius:2px;padding-bottom:0}.DagPlaArea{width:100%;transition:width .2s;position:relative;padding:0;overflow:hidden;line-height:20px;border-bottom-right-radius:.3rem;border-bottom-left-radius:.3rem;}#server{overflow:hidden;}#server ul{list-style-type:none;margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}#server ul li{display:inline-block;}#server .DagPlayOpt{width:auto;padding:5px 10px;text-align:center;min-width: 38px;font-weight:400;cursor:pointer;font-size:14px;background: #303030;border-radius: 3px;margin: 0 5px 10px;}#server .DagPlayOpt.on{color:#fff;background:var(--primary);}.video-content{background:#000;overflow:hidden}#embed_holder,#pembed,.video-content{position:relative}#pembed{max-width:100%;height:0;padding-bottom:56.25%}.playerload{width:80px;height:80px;border-radius:150px;border:15px solid #fff;border-top-color:rgba(0,0,0,.3);box-sizing:border-box;position:absolute;top:50%;left:50%;margin-top:-38px;margin-left:-38px;animation:playerload 1.2s linear infinite;-webkit-animation:playerload 1.2s linear infinite}@keyframes playerload{0%{transform:rotate(0deg)}to{transform:rotate(360deg)}}@-webkit-keyframes playerload{0%{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}#embed_holder embed,#embed_holder iframe{z-index:1;position:absolute;border:none;width:100%;height:100%;top:0;left:0;margin:0;padding:0}.video-nav{display: flex;justify-content: space-between;background: var(--secondary);position:relative;overflow:hidden;font-size:.85em;color:#888;height:38px;line-height:38px;}.itemleft{overflow:hidden;font-weight:300;}.itemleft .icon,.itemright .icon{display:inline-flex;align-items:center;gap:2px;padding:0 8px;cursor:pointer}.itemleft .icon.turnedOff{color:#fff;z-index:999999;position:relative;}.video-nav .icon svg,span.light:before{color:#ababab;vertical-align:middle;border-radius:10px}.video-nav .icon svg{width:14px;height:14px;font-size:14px;}span.light:before{content:'';background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,11H23V13H20V11M1,11H4V13H1V11M13,1V4H11V1H13M4.92,3.5L7.05,5.64L5.63,7.05L3.5,4.93L4.92,3.5M16.95,5.63L19.07,3.5L20.5,4.93L18.37,7.05L16.95,5.63M12,6A6,6 0 0,1 18,12C18,14.22 16.79,16.16 15,17.2V19A1,1 0 0,1 14,20H10A1,1 0 0,1 9,19V17.2C7.21,16.16 6,14.22 6,12A6,6 0 0,1 12,6M14,21V22A1,1 0 0,1 13,23H11A1,1 0 0,1 10,22V21H14M11,18H13V15.87C14.73,15.43 16,13.86 16,12A4,4 0 0,0 12,8A4,4 0 0,0 8,12C8,13.86 9.27,15.43 11,15.87V18Z' fill='%233c97f3'/%3E%3C/svg%3E") center/20px no-repeat;display:inline-block;margin-right:7px;min-width:20px;min-height:20px}.PlayShare{overflow:hidden;width:100%;padding-top:0;line-height:20px}#shadow,.PlayShare.None{display:none;transition:.5s}.ShareSection{overflow:hidden;padding:7px}.ShareSection b{color:#222d34;font-size:16px;margin-right:5px;line-height:22px;border-right:2px solid #fff;padding-right:10px;font-weight:500}.ShareSection b,.sosmed,.sosmed a{display:inline-block}.sosmed a{width:auto;height:auto;font-size:12px;color:#fff!important;border-radius:4px;background:#444;margin:6px;padding:3px 15px}a.shrFB{background:#1877f2}a.shrTW{background:#1da1f2}#shadow{position:fixed;left:0;top:0;bottom:0;background:rgba(0,0,0,.93);width:100%;height:100%;z-index:1;transition:all .5s ease}.DaBlock{display:none;transition:.5s}.DaBlock{display:block!important}
 .resIn {background:var(--secondary);min-height: 50px;padding: 12px;color: #fff;display: none;border-radius: .3rem;}.server_option {background: var(--secondary);padding: 15px;border-radius: .3rem;margin-bottom: 1.66rem;}#server .DagPlayOpt:hover {background: #363636;}.servers {margin-bottom: 10px;display: flex;justify-content: flex-end;gap: 5px;}.tabs span {color: #525252;cursor: pointer;padding: 2px 5px;border-radius: .25rem;font-weight: 600;font-size: .98em;transition: all .15s;}.tabs span.active {color: #eee;}.DagTo .icon:hover {background: #141414;}.tabs span:hover,.tabs a:hover {color: #787878;}.serverEpisode {display: none}.video-nav .icon a {color: #888}
@@ -1054,25 +958,26 @@ footer .mascot{position:absolute;right:0;bottom:0;background-image:url(https://w
 .help{grid-area:help;}
 #footer{display:grid;grid-template-areas:"list list list""credit links help";padding-bottom:20px;}
 footer .azlist .head{margin-bottom:10px;padding-top:10px;}
-footer .azlist .head .title{font-weight:600;color: white;}
-footer .azlist .head .desc{font-size:.9em;color:white;}
+footer .azlist .head .title{font-weight:600;}
+footer .azlist .head .desc{font-size:.9em;color:#ababab;}
 footer .azlist .head .desc::before{content:"";width:1px;height:1em;display:inline-block;background:#ccc;margin-left:10px;margin-right:15px;vertical-align:middle;}
 footer h3.title{color:#fff;font-size:1.17em;font-weight:500;}
 footer .azlist{margin-bottom:30px;}
 footer .azlist ul{list-style:none;margin:0;padding:0;}
 footer .azlist ul li{float:left;}
-footer .azlist ul li a{padding:2px 5px;background:var(--blue);min-width:30px;display:block;text-align:center;border-radius:2px;margin:0 8px 8px 0;color:var(--white);transition:all .15s;}
+footer .azlist ul li a{padding:2px 5px;background:#363636;min-width:30px;display:block;text-align:center;border-radius:2px;margin:0 8px 8px 0;color:#ccc;transition:all .15s;}
 footer .azlist ul li a:hover{background:var(--primary);color:#fff;}
 footer .LinkList:not(.azlist) ul{padding:0;list-style:none;}
-footer .LinkList:not(.azlist) li a{font-size:.96em;color:var(--red);transition:all .15s;}
+footer .LinkList:not(.azlist) li a{font-size:.96em;color:#666;transition:all .15s;}
 footer .LinkList:not(.azlist) li a:hover{color:#ababab;}
-footer .disclaim{color:var(--white);font-size:.8em;max-width:480px;}
+footer .disclaim{color:#666;font-size:.8em;max-width:480px;}
 footer .socials{margin-top:10px;margin-bottom:10px;}
 footer .socials svg{width:26px;height:26px;}
 footer .socials a + a{margin-left:10px;}
 @media screen and (min-width:1279px){#footer {grid-template-columns: 50% 20% 20%;}}
 @media screen and (max-width:1279px){footer .mascot{display:none;}}
 @media screen and (max-width:768px){#footer{grid-template-areas:"list list""credit credit""links help";}footer .disclaim{margin:0 auto;}}
+
 .widget.Text{border:1px solid transparent;}
 #main .widget.Text{position:relative;padding:.75rem 1.25rem;border:1px solid transparent;border-radius:.25rem;}
 #main .widget.Text{color:#856404;background-color:#fff3cd;border-color:#ffeeba;}
@@ -1080,9 +985,8 @@ footer .socials a + a{margin-left:10px;}
 .dir .dub + span{margin-left:-8px;}
 .dir > span:last-child{padding-right:6px;}
 .dir .dub{background-color:$(dub)}
-.fv .ep {background-color:$(ep)}
+.fv .ep {background-color:$(leg)}
 .sc {background-color:$(score)}
-
 
 /* Search Filter */
 
@@ -1169,9 +1073,9 @@ footer .socials a + a{margin-left:10px;}
 .scheduled{margin-top:20px;margin-left:-15px;margin-right:-15px;}
 .scheduled a:nth-child(2n-1){background:#191919;}
 .scheduled a{display:block;padding:8px 15px;}
-.scheduled a time{color:var(--white);min-width:60px;display:inline-block;font-size:1.28em;font-weight:300;-webkit-transition:all .15s;-moz-transition:all .15s;transition:all .15s;min-width: 15%;}
-.scheduled a span{color:var(--red);-webkit-transition:all .15s;-moz-transition:all .15s;transition:all .15s;font-size:1.01em;}
-.scheduled a button{float:right;display:inline-block;background-color:#2b2b2b;color:var(--white);border-radius:.25rem;font-size:.85em;padding:5px 15px;min-width:120px;text-align:left;-webkit-transition:all .15s;-moz-transition:all .15s;transition:all .15s;border:none;outline:0;}
+.scheduled a time{color:#ababab;min-width:60px;display:inline-block;font-size:1.28em;font-weight:300;-webkit-transition:all .15s;-moz-transition:all .15s;transition:all .15s;min-width: 15%;}
+.scheduled a span{color:#666;-webkit-transition:all .15s;-moz-transition:all .15s;transition:all .15s;font-size:1.01em;}
+.scheduled a button{float:right;display:inline-block;background-color:#2b2b2b;color:#ababab;border-radius:.25rem;font-size:.85em;padding:5px 15px;min-width:120px;text-align:left;-webkit-transition:all .15s;-moz-transition:all .15s;transition:all .15s;border:none;outline:0;}
 .scheduled a::after{display:block;clear:both;content:"";}
 .scheduled a:hover{background-color:#212121;}
 .scheduled a:hover span{color:#ababab;}
@@ -1289,19 +1193,12 @@ footer .socials a + a{margin-left:10px;}
 .cdCont{background:#1c1c1c;color:#fffdfc;padding-top: 60px;border-radius: 50px;}
 .cdCont[data-disc]::before{background:#2d2d30}
 .cdCont .cdBox{background-color:#1e1e1e}
-
 .cdCont[data-epl]:not([data-epl=''])::before{content:attr(data-epl);display:block;font-weight:700;font-size:13px;width:50px;height:50px;padding:10px 0 10px;background:#010245;border-radius:5px 5px 50px 50px;position:absolute;top:-5px;right:50px}
-
 .cdCont[data-fa]:not([data-fa=''])::before{content:attr(data-fa);display:block;font-weight:700;font-size:13px;width:50px;height:50px;padding:10px 0 10px;background:#e6000b;border-radius:5px 5px 50px 50px;position:absolute;top:-5px;right:50px}
-
 .cdCont[data-lc]:not([data-lc=''])::before{content:attr(data-lc);display:block;font-weight:700;font-size:13px;width:50px;height:50px;padding:10px 0 10px;background:#298b01;border-radius:5px 5px 50px 50px;position:absolute;top:-5px;right:50px}
-
 .cdCont[data-uel]:not([data-uel=''])::before{content:attr(data-uel);display:block;font-weight:700;font-size:13px;width:50px;height:50px;padding:10px 0 10px;background:#ed8417;border-radius:5px 5px 50px 50px;position:absolute;top:-5px;right:50px}
-
 .cdCont[data-ucl]:not([data-ucl=''])::before{content:attr(data-ucl);display:block;font-weight:700;font-size:13px;width:50px;height:50px;padding:10px 0 10px;background:#0406b0;border-radius:5px 5px 50px 50px;position:absolute;top:-5px;right:50px}
-
 .cdCont[data-exb]:not([data-exb=''])::before{content:attr(data-exb);display:block;font-weight:700;font-size:13px;width:50px;height:50px;padding:10px 0 10px;background:#70045c;border-radius:5px 5px 50px 50px;position:absolute;top:-5px;right:50px}
-
 
 /* Seasons */
 .seasons{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;box-sizing:content-box;margin-top:1.66rem;flex-wrap:wrap;}
@@ -1335,9 +1232,10 @@ footer .socials a + a{margin-left:10px;}
 @media (min-width: 1200px){.FeaturedPost .synopsis{display:none;}.FeaturedPost .info{display:flex;gap:5px;position:absolute;padding:10rem;z-index:5;align-items:center;width:100%;}.FeaturedPost .bg-img{width:60%;border-radius:1rem;background-size:cover;position:relative;padding-bottom:60%;background-position:center center;background-repeat:no-repeat;}.blob {border-radius: 50%;margin: 3px 3px;height: 30px;width: 26px;transform: scale(1);}}
 @media (max-width:756px){.FeaturedPost .fluid-bg .bg-img{padding-bottom:100%;}.FeaturedPost .snip{width:70%;}.FeaturedPost{padding:0;width:98%;}.items {display: flex;align-items: center;position: relative;gap: 3rem;border-radius: 1rem;overflow: hidden;height: 150px;}}
 
+
 /* Pagination Numeric */
 .blog-pager{margin-top:20px;border-top:1px solid var(--secondary);padding-top:10px;padding-bottom:10px;text-align:center;}
-#blog-pager a,.showpageOf,.pagecurrent{padding:5px 10px;margin:1px;border-radius:6px;background-color:var(--secondary);display:inline-block;}
+#blog-pager a,.showpageOf,.pagecurrent{padding:9px 16px;margin:5px;border-radius:4px;background-color:var(--secondary);display:inline-block;}
 .pagecurrent{background:var(--primary);}
 
 /* Live Search */
@@ -1353,49 +1251,15 @@ footer .socials a + a{margin-left:10px;}
 }
 .cari-isi{padding:.5rem 0;width:100%;box-sizing:border-box}.cari-isi *{box-sizing:border-box}.cari-isi form{position:relative}.cari-input{padding:1rem 4rem 1rem 1.25rem;width:100%;border-radius:7px;background-color:var(--secondary);color:var(--postText);outline:0;border:none}.cari-ikon{display:-moz-box;display:-ms-flexbox;display:-webkit-box;display:-webkit-flex;display:flex;align-items:center;position:absolute;bottom:0;opacity:.5;right:1.25rem;top:-3px;visibility:visible;transition:.3s ease}.cari-input:focus~.cari-ikon{right:3rem;opacity:0;visibility:hidden}.cari-isi svg{height:1.5rem;width:1.5rem}.cari-isi circle,.cari-isi path{clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:var(--postText);stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:1.25px;transition:stroke .3s ease}.cari-reset{border:none;outline:0;background:0 0;cursor:pointer;font-size:inherit;position:absolute;opacity:0;padding:0;right:2rem;top:0;bottom:0;visibility:hidden;transition:.3s ease}.cari-reset svg{height:1.65rem;margin-right:0;vertical-align:-3px;width:1.65rem}.cari-reset .bulat{fill:red;stroke:none;stroke-width:0}.cari-reset .silang{stroke:#fff}.cari-input:focus~.cari-reset{right:1.25rem;opacity:1;visibility:visible}.live-search-item{position:fixed;z-index:9999;background-color:var(--secondary);border-radius: 8px;color:var(--postText)}.live-search-item ul{padding:0;margin:0;list-style:none;border-radius:8px}.live-search-item li{padding:10px;border-bottom:1px solid var(--dark);overflow:hidden}.live-search-item li a{display:block}.live-search-thumb{margin-right:10px;float:left;width:40px;height:60px;overflow:hidden;padding-bottom:0;box-sizing:content-box;text-decoration:none}.live-search-item li img{max-width:100%;height:100%;object-fit:cover}.live-search-item li .over{overflow:hidden;float:right;width:calc(100% - (40px + 10px));box-sizing:content-box}.live-search-item li .autotitle{font-size:.95em;color:var(--postText);font-weight:500;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.live-search-item .live-meta{display:block;color:var(--gray-light);margin-bottom:2px;font-size:12px;overflow:hidden}
 
-
-/* ajax search */
-.ajax-search.hidden{display:none}
-.ajax-search{padding:20px 10px;background:rgba(255,255,255,.89)!important;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);text-align:center;box-shadow:0 15px 10px -10px rgba(155,155,155,0.15),0 -15px 10px -10px rgba(155,155,155,0.15);max-height:450px!important;margin:20px auto;border-radius:8px;animation:fadeInDown .5s linear}
-.ajax-search-results-empty{text-align:center}
-.ajax-search h3{color:#000;font-size:14px;font-weight:500;margin:0 10px 20px 10px;text-align:left}
-.ajax-search-results{text-align:left}
-.ajax-search li{background:#fff;position:relative;display:inline-block;width:100%;padding:10px;margin:5px 5px 5px -15px;border-radius:5px;border:1px solid rgba(155,155,155,0.15);overflow:hidden;transition:all .3s}
-.ajax-search li:hover{border-color:#f89000}
-.ajax-search li h4{font-size:13px;font-weight:500;margin:0 15px 0 0}
-.ajax-search li h4 a{color:#000;transition:all .3s}
-.ajax-search li h4 mark{background-color:transparent;color:#f89000;text-decoration:underline;transition:all .3s}
-.ajax-search li h4 a:hover,.ajax-search li h4:hover mark{color:#f89000}
-.ajax-search-image{float:left;margin:0 10px 0 0}
-.ajax-search-image img{border-radius:5px}
-.ajax-search-pager a{display:inline-block;clear:both;overflow:hidden;background:#f89000;color:#fff;font-size:13px;padding:7px 15px;border-radius:5px;margin:15px 3px 0 3px}
-.ajax-search-pager{overflow:hidden;clear:both;position:relative}.ajax-search li:nth-child(odd){animation:bounceInLeft 1.5s}
-.ajax-search li:nth-child(even){animation:bounceInRight 1.5s}
-
-/* animasi */
-@keyframes bounceInLeft{from,60%,75%,90%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.610,0.355,1.000);animation-timing-function:cubic-bezier(0.215,0.610,0.355,1.000)}0%{opacity:0;-webkit-transform:translate3d(-3000px,0,0);transform:translate3d(-3000px,0,0)}60%{opacity:1;-webkit-transform:translate3d(25px,0,0);transform:translate3d(25px,0,0)}75%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}90%{-webkit-transform:translate3d(5px,0,0);transform:translate3d(5px,0,0)}to{-webkit-transform:none;transform:none}}
-@keyframes bounceInRight{from,60%,75%,90%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.610,0.355,1.000);animation-timing-function:cubic-bezier(0.215,0.610,0.355,1.000)}from{opacity:0;-webkit-transform:translate3d(3000px,0,0);transform:translate3d(3000px,0,0)}60%{opacity:1;-webkit-transform:translate3d(-25px,0,0);transform:translate3d(-25px,0,0)}75%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}90%{-webkit-transform:translate3d(-5px,0,0);transform:translate3d(-5px,0,0)}to{-webkit-transform:none;transform:none}}
-@keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}
-
-/* css darkmode sesuaikan class ( .drK ) jika berbeda agar dapat berfungsi */
-.drK .ajax-search{background:#1e1e1e!important;color:rgba(255,255,255,.85)}
-.drK .ajax-search li h4 a{color:#fff}
-.drK .ajax-search li h4 a:hover{color:#fff;text-decoration:underline}
-.drK .ajax-search-pager a{background:#294db4;color:#fff;border:0}
-.drK .ajax-search-pager a:hover{background:#1c2733;color:#fff}
-.drK .ajax-search li{background:#1c1c1c;border:0;box-shadow:none}
-.drK .ajax-search li:hover{background:#1e1e1e}
-.drK .ajax-search h3{color:#fff}
-
-/* hidden judul */
-#HTML9 .title,#HTML11 .title,#HTML12 .title,#HTML3 .title,#HTML7 .title,#HTML10 .title {display:none}
+/* hidden judul end css */
+#HTML11 .title,#HTML12 .title,#HTML13 .title,#HTML14 .title,#HTML15 .title,#HTML16 .title {display:none}
 
  ]]></b:skin>
   <b:template-skin>
     <![CDATA[ 
 html,body#layout #outer-wrapper,body#layout .row{width:auto;padding:0}
 body#layout{position:relative;width:auto;max-width:100%;background-color:#f9f9f9;padding:95px 5px 0;margin:0}
-body#layout:before{content:'NineStream Lite v1.2';position:absolute;top:0;left:5px;right:5px;height:95px;font-family:Roboto,sans-serif;font-size:23px;color:#0F1618;line-height:95px;text-align:center}
+body#layout:before{content:'NineStream Lite v1.2 - E1.0';position:absolute;top:0;left:5px;right:5px;height:95px;font-family:Roboto,sans-serif;font-size:23px;color:#0F1618;line-height:95px;text-align:center}
 body#layout div.section{display:block;background-color:#f1f1f1!important;margin:0 5px 10px!important;padding:16px 16px 18px!important;border-color:#e5e5e5}
 body#layout .no-items.section{display:block}
 body#layout .section h4{font-size:14px;color:#0F1618;text-transform:uppercase;margin:0}
@@ -1505,13 +1369,13 @@ body#layout:after{content:'Designed by - EmissionHex';display:block;font-family:
             <a class='ads-here' href='#'>Responsive Advertisement</a>
           </b:includable>
       <b:includable id='relatedPost'>
-      <!--  <div class='head mt-8'>
- <h3 class='title'>
+        <div class='head mt-8'>
+<h3 class='title'>
 Recomendation
 </h3>
 
 </div>
-        <ul class='grid gtc-raf g-var lsn p-0' id='output'/> -->
+        <ul class='grid gtc-raf g-var lsn p-0' id='output'/>
          
 
           <script async='async'>
@@ -1526,11 +1390,11 @@ function kerangkaRelated(entry) {
   let html = &#39;&#39;;
 	
   entry.forEach(post =&gt; {
-    let tipe = post.label.find(i =&gt; [&#39;TV&#39;, &#39;Movie&#39;, &#39;OVA&#39;, &#39;ONA&#39;, &#39;Special&#39;].includes(i)) || false;
+    let tipe = post.label.find(i =&gt; [&#39;TV&#39;, &#39;Movie&#39;, &#39;OVA&#39;, &#39;ONA&#39;, &#39;Special&#39;, &#39;Rilis&#39;].includes(i)) || false;
     html += `<li class='hentry play c:hover-eee'><a class='block ofc relative poster r3 oh' href='${post.link}'><img class='ar-2sx h-max w-max' src='${post.image}'/>`;
     tipe &amp;&amp; (html += `<div class='absolute b-0 r-0 fs-13 c-eee brr5 tlr8 dir ttu'>
               <span class='${tipe}'>${tipe}</span></div></a>`);
-    html += `<h3 class='clamp oh tac mt-8'><a class='fs-md fw-400 c-mu-h' href='${post.link}'>${post.title}</a></h3></li>`;
+    html += `<h3 class='clamp oh tac mt-8'><a class='fs-md fw-400 c-aba' href='${post.link}'>${post.title}</a></h3></li>`;
   })
 
   document.getElementById(&#39;output&#39;).innerHTML = html;
@@ -1542,12 +1406,14 @@ relat.relatedPost(kerangkaRelated); </script>
       <b:includable id='postPaginationNumeric'>
         <script>/*<![CDATA[*/
 var noPage,currentPage,currentPageNo,postLabel,
-perPage=10,
-numPages=2,
+perPage=9,
+numPages=3,
+firstText="First",
+lastText="Last",
 prevText="Previous",
 nextText="Next",
 
-urlactivepage=location.href,home_page="/";function looppagecurrentg(e){var a="";pageNumber=parseInt(numPages/2),pageNumber==numPages-pageNumber&&(numPages=2*pageNumber+1),pageStart=currentPageNo-pageNumber,pageStart<1&&(pageStart=1),lastPageNo=parseInt(e/perPage)+1,lastPageNo-1==e/perPage&&(lastPageNo-=1),pageEnd=pageStart+numPages-1,pageEnd>lastPageNo&&(pageEnd=lastPageNo),a+="";var t=parseInt(currentPageNo)-1;currentPageNo>1&&(a+="page"==currentPage?'<span class="showpage firstpage"><a href="'+home_page+'">'+firstText+"</a></span>":'<span class="displaypageNum firstpage"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">'+firstText+"</a></span>"),currentPageNo>2&&(a+=3==currentPageNo?"page"==currentPage?'<span class="showpage"><a href="'+home_page+'">'+prevText+"</a></span>":'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">'+prevText+"</a></span>":"page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+t+');return false">'+prevText+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+t+');return false">'+prevText+"</a></span>"),pageStart>1&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="'+home_page+'">1</a></span>':'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">1</a></span>'),pageStart>2&&(a+=" ... ");for(var s=pageStart;s<=pageEnd;s++)a+=currentPageNo==s?'<span class="pagecurrent">'+s+"</span>":1==s?"page"==currentPage?'<span class="displaypageNum"><a href="'+home_page+'">1</a></span>':'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">1</a></span>':"page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+s+');return false">'+s+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+s+');return false">'+s+"</a></span>";pageEnd<lastPageNo-1&&(a+="..."),pageEnd<lastPageNo&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+lastPageNo+');return false">'+lastPageNo+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+lastPageNo+');return false">'+lastPageNo+"</a></span>");var r=parseInt(currentPageNo)+1;currentPageNo<lastPageNo-1&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+r+');return false">'+nextText+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+r+');return false">'+nextText+"</a></span>"),currentPageNo<lastPageNo&&(a+="page"==currentPage?'<span class="displaypageNum lastpage"><a href="#" onclick="redirectpage('+lastPageNo+');return false">'+lastText+"</a></span>":'<span class="displaypageNum lastpage"><a href="#" onclick="redirectlabel('+lastPageNo+');return false">'+lastText+"</a></span>");for(var p=document.getElementsByName("pageArea"),n=document.getElementById("blog-pager"),l=0;l<p.length;l++)p[l].innerHTML=a;p&&p.length>0&&(a=""),n&&(n.innerHTML=a)}function totalcountdata(e){var a=e.feed;looppagecurrentg(parseInt(a.openSearch$totalResults.$t,10))}function pagecurrentg(){var e=urlactivepage;-1!=e.indexOf("/search/label/")&&(postLabel=-1!=e.indexOf("?updated-max")?e.substring(e.indexOf("/search/label/")+14,e.indexOf("?updated-max")):e.substring(e.indexOf("/search/label/")+14,e.indexOf("?&max"))),-1==e.indexOf("?q=")&&-1==e.indexOf(".html")&&(-1==e.indexOf("/search/label/")?(currentPage="page",currentPageNo=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,document.write('<script src="'+home_page+'feeds/posts/summary?max-results=1&alt=json-in-script&callback=totalcountdata"><\/script>')):(currentPage="label",-1==e.indexOf("&max-results=")&&(perPage=20),currentPageNo=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,document.write('<script src="'+home_page+"feeds/posts/summary/-/"+postLabel+'?alt=json-in-script&callback=totalcountdata&max-results=1" ><\/script>')))}function redirectpage(e){jsonstart=(e-1)*perPage,noPage=e;var a=document.getElementsByTagName("head")[0],t=document.createElement("script");t.type="text/javascript",t.setAttribute("src",home_page+"feeds/posts/summary?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(t)}function redirectlabel(e){jsonstart=(e-1)*perPage,noPage=e;var a=document.getElementsByTagName("head")[0],t=document.createElement("script");t.type="text/javascript",t.setAttribute("src",home_page+"feeds/posts/summary/-/"+postLabel+"?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(t)}function finddatepost(e){post=e.feed.entry[0];var a=post.published.$t.substring(0,19)+post.published.$t.substring(23,29),t=encodeURIComponent(a);if("page"==currentPage)var s="/search?updated-max="+t+"&max-results="+perPage+"#PageNo="+noPage;else s="/search/label/"+postLabel+"?updated-max="+t+"&max-results="+perPage+"#PageNo="+noPage;location.href=s}void 0===firstText&&(firstText="First"),void 0===lastText&&(lastText="Last"),pagecurrentg();
+urlactivepage=location.href,home_page="/";function looppagecurrentg(e){var a="";pageNumber=parseInt(numPages/2),pageNumber==numPages-pageNumber&&(numPages=2*pageNumber+1),pageStart=currentPageNo-pageNumber,pageStart<1&&(pageStart=1),lastPageNo=parseInt(e/perPage)+1,lastPageNo-1==e/perPage&&(lastPageNo-=1),pageEnd=pageStart+numPages-1,pageEnd>lastPageNo&&(pageEnd=lastPageNo),a+="<span class='showpageOf'>Page "+currentPageNo+" of "+lastPageNo+"</span>";var t=parseInt(currentPageNo)-1;currentPageNo>1&&(a+="page"==currentPage?'<span class="showpage firstpage"><a href="'+home_page+'">'+firstText+"</a></span>":'<span class="displaypageNum firstpage"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">'+firstText+"</a></span>"),currentPageNo>2&&(a+=3==currentPageNo?"page"==currentPage?'<span class="showpage"><a href="'+home_page+'">'+prevText+"</a></span>":'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">'+prevText+"</a></span>":"page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+t+');return false">'+prevText+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+t+');return false">'+prevText+"</a></span>"),pageStart>1&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="'+home_page+'">1</a></span>':'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">1</a></span>'),pageStart>2&&(a+=" ... ");for(var s=pageStart;s<=pageEnd;s++)a+=currentPageNo==s?'<span class="pagecurrent">'+s+"</span>":1==s?"page"==currentPage?'<span class="displaypageNum"><a href="'+home_page+'">1</a></span>':'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">1</a></span>':"page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+s+');return false">'+s+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+s+');return false">'+s+"</a></span>";pageEnd<lastPageNo-1&&(a+="..."),pageEnd<lastPageNo&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+lastPageNo+');return false">'+lastPageNo+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+lastPageNo+');return false">'+lastPageNo+"</a></span>");var r=parseInt(currentPageNo)+1;currentPageNo<lastPageNo-1&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+r+');return false">'+nextText+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+r+');return false">'+nextText+"</a></span>"),currentPageNo<lastPageNo&&(a+="page"==currentPage?'<span class="displaypageNum lastpage"><a href="#" onclick="redirectpage('+lastPageNo+');return false">'+lastText+"</a></span>":'<span class="displaypageNum lastpage"><a href="#" onclick="redirectlabel('+lastPageNo+');return false">'+lastText+"</a></span>");for(var p=document.getElementsByName("pageArea"),n=document.getElementById("blog-pager"),l=0;l<p.length;l++)p[l].innerHTML=a;p&&p.length>0&&(a=""),n&&(n.innerHTML=a)}function totalcountdata(e){var a=e.feed;looppagecurrentg(parseInt(a.openSearch$totalResults.$t,10))}function pagecurrentg(){var e=urlactivepage;-1!=e.indexOf("/search/label/")&&(postLabel=-1!=e.indexOf("?updated-max")?e.substring(e.indexOf("/search/label/")+14,e.indexOf("?updated-max")):e.substring(e.indexOf("/search/label/")+14,e.indexOf("?&max"))),-1==e.indexOf("?q=")&&-1==e.indexOf(".html")&&(-1==e.indexOf("/search/label/")?(currentPage="page",currentPageNo=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,document.write('<script src="'+home_page+'feeds/posts/summary?max-results=1&alt=json-in-script&callback=totalcountdata"><\/script>')):(currentPage="label",-1==e.indexOf("&max-results=")&&(perPage=20),currentPageNo=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,document.write('<script src="'+home_page+"feeds/posts/summary/-/"+postLabel+'?alt=json-in-script&callback=totalcountdata&max-results=1" ><\/script>')))}function redirectpage(e){jsonstart=(e-1)*perPage,noPage=e;var a=document.getElementsByTagName("head")[0],t=document.createElement("script");t.type="text/javascript",t.setAttribute("src",home_page+"feeds/posts/summary?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(t)}function redirectlabel(e){jsonstart=(e-1)*perPage,noPage=e;var a=document.getElementsByTagName("head")[0],t=document.createElement("script");t.type="text/javascript",t.setAttribute("src",home_page+"feeds/posts/summary/-/"+postLabel+"?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(t)}function finddatepost(e){post=e.feed.entry[0];var a=post.published.$t.substring(0,19)+post.published.$t.substring(23,29),t=encodeURIComponent(a);if("page"==currentPage)var s="/search?updated-max="+t+"&max-results="+perPage+"#PageNo="+noPage;else s="/search/label/"+postLabel+"?updated-max="+t+"&max-results="+perPage+"#PageNo="+noPage;location.href=s}void 0===firstText&&(firstText="First"),void 0===lastText&&(lastText="Last"),pagecurrentg();
  /*]]>*/</script>
       </b:includable>
       <b:includable id='postPaginationMore'>
@@ -1604,23 +1470,17 @@ urlactivepage=location.href,home_page="/";function looppagecurrentg(e){var a="";
             <div class='snip'>
               <b:include cond='data:this.postDisplay.showTitle' name='snippetedPostTitle'/>
               <div class='meta icons'>
-                <!--
                 <i class='rating'>PG 13</i>
                 <i class='quality'>HD</i>
                 <svg height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm3.027 4.002c-.83 0-1.319.642-1.319 1.753v.743c0 1.107.48 1.727 1.319 1.727c.69 0 1.138-.435 1.186-1.05H7.36v.114c-.057 1.147-1.028 1.938-2.342 1.938c-1.613 0-2.518-1.028-2.518-2.729v-.747C2.5 6.051 3.414 5 5.018 5c1.318 0 2.29.813 2.342 2v.11H6.213c-.048-.638-.505-1.108-1.186-1.108zm6.14 0c-.831 0-1.319.642-1.319 1.753v.743c0 1.107.48 1.727 1.318 1.727c.69 0 1.139-.435 1.187-1.05H13.5v.114c-.057 1.147-1.028 1.938-2.342 1.938c-1.613 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.751 2.518-2.751c1.318 0 2.29.813 2.342 2v.11h-1.147c-.048-.638-.505-1.108-1.187-1.108z' fill='currentColor'/></svg>
                 <svg height='512' viewBox='0 0 512 512' width='512' xmlns='http://www.w3.org/2000/svg'><path d='M192 448h128m64-240v32c0 70.4-57.6 128-128 128h0c-70.4 0-128-57.6-128-128v-32m128 160v80' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'/><path d='M256 320a78.83 78.83 0 0 1-56.55-24.1A80.89 80.89 0 0 1 176 239V128a79.69 79.69 0 0 1 80-80c44.86 0 80 35.14 80 80v111c0 44.66-35.89 81-80 81Z' fill='currentColor'/></svg>
-              -->
-                <span class='blob yellow'/>
-                  <span class='blob blue'/>
-                  <span class='blob purple'/>
-                  <span class='blob red'/>
               </div>
               <b:include cond='data:this.postDisplay.showDate or data:this.postDisplay.showAuthor' name='snippetedPostByline'/>
               <b:if cond='data:this.postDisplay.showSnippet'>
                 <p class='synopsis'>
                   <b:eval expr='data:post.body snippet { links: false,length: 200,linebreaks: false}'/>
                 </p>
-                <div class='actions'> <a class='btn play btn-primary' expr:href='data:post.url'><svg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z' fill='currentColor'/></svg> Live Now</a> </div>
+                <div class='actions'> <a class='btn play btn-primary' expr:href='data:post.url'><svg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z' fill='currentColor'/></svg> Play now</a> </div>
               </b:if>
             </div>
             <div class='fluid-bg'>
@@ -1694,15 +1554,11 @@ urlactivepage=location.href,home_page="/";function looppagecurrentg(e){var a="";
             </span>
           </b:loop>
         </div>
-            <!--
-        <label class='cp' expr:for='data:widget.instanceId + &quot;-w&quot;'>
+     <!--   <label class='cp' expr:for='data:widget.instanceId + &quot;-w&quot;'>
           <b:with value='data:labels.length' var='item'>
             Show more (+<b:eval expr='data:item - 10'/>)
           </b:with> 
         </label> -->
-            
-            
-            
       </b:includable>
       <b:includable id='list'>
   <ul>
@@ -1731,7 +1587,7 @@ urlactivepage=location.href,home_page="/";function looppagecurrentg(e){var a="";
   <b:if cond='data:view.isMultipleItems or data:view.isPost'>
   <script type='text/javascript'>/*<![CDATA[*/
 const mTP={shuffleArray:t=>{var e,i,n=t.length;if(0===n)return!1;for(;--n;)e=Math.floor(Math.random()*(n+1)),i=t[n],t[n]=t[e],t[e]=i;return t},run:(t,e,i=10,n=5)=>{if(0==t("#mTP_Slider").length)return console.log("Tag mTP_Slider tidak ada");mTP.maxCat=n,mTP.max=i,window.matchMedia("(max-width: 600px)").matches&&(mTP.maxCat=3),window.matchMedia("(max-width: 480px)").matches&&(mTP.maxCat=2);const a=0==e?"":`/-/${e}`;t.ajax({url:`/feeds/posts/default${a}?alt=json-in-script&max-results=150`,type:"get",dataType:"jsonp",success:function(e){mTP.compile(t,e)},error:function(t){console.log(t)}})},compile:(t,e)=>{if("entry"in e.feed){const n=mTP.shuffleArray(e.feed.entry);mTP.filter=mTP.shuffleArray(e.feed.category.map(t=>t.term).filter(t=>{if(mTP.Select.includes(t))return t})).slice(0,mTP.maxCat),mTP.obj={},t.each(mTP.filter,function(e,i){n.filter(e=>{const n=e.category.map(t=>t.term);if(n.includes(i)){const a=mTP.obj[i];a?a.length<mTP.max&&a.push({title:e.title.$t,cat:n,link:e.link.find(t=>"alternate"==t.rel).href,image:"media$thumbnail"in e?e.media$thumbnail.url.match(/\/s[0-9]{2}-(w[0-9]+-)?c/)?e.media$thumbnail.url.replace(/\/s[0-9]{2}-(w[0-9]+-)?c/,`/${mTP.iSize}-p-k-no-nu`):e.media$thumbnail.url.replace(/\=s[0-9]{2}-(w[0-9]+-)?c/,`=${mTP.iSize}-p-k-no-nu`):"content"in e?t(e.content.$t).find("img").attr("src"):mTP.noImage}):mTP.obj[i]=[{title:e.title.$t,cat:n,link:e.link.find(t=>"alternate"==t.rel).href,image:"media$thumbnail"in e?e.media$thumbnail.url.match(/\/s[0-9]{2}-(w[0-9]+-)?c/)?e.media$thumbnail.url.replace(/\/s[0-9]{2}-(w[0-9]+-)?c/,`/${mTP.iSize}-p-k-no-nu`):e.media$thumbnail.url.replace(/\=s[0-9]{2}-(w[0-9]+-)?c/,`=${mTP.iSize}-p-k-no-nu`):"content"in e?t(e.content.$t).find("img").attr("src"):mTP.noImage}]}})});const a=t('<div class="series-gen"><div class="head"><div class="r-title"><svg type="button" onclick="mTP.run(jQuery, &#039;Rilis&#039;, 11, 3)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"/></svg></div><ul class="nav-tabs tabs"></ul></div><div class="listupd"></div></div>'),l=Object.keys(mTP.obj).sort().reduce((t,e)=>(t[e]=mTP.obj[e],t),{});for(var i in l){const e=i.replace(/\W/g,"");a.find(".nav-tabs").append(`<li><span data-id="series-${e}">${i}</span></li>`),a.find(".listupd").append(`<div id="series-${e}" class="customAF scroll"><div class="inner scrolling"></div>${mTP.btnPrev}${mTP.btnNext}</div>`),t.each(mTP.obj[i],function(){a.find(`#series-${e} .inner`).append(`<article class="customAgata">\n          <a href="${this.link}" title="${this.title}">\n            <div class="images">\n              <figure>\n                <img src="${this.image}" alt="${this.title}">\n              </figure>\n            </div>\n            <h2 class="entry-title">${this.title}</h2>\n          </a>\n        </article>`)})}t("#mTP_Slider").html(a),t(".nav-tabs li").click(function(){const e=t(this).find("span").attr("data-id");t(".customAF.scroll, .nav-tabs li").each(function(){t(this).attr("id")==e||t(this).find("span").attr("data-id")==e?t(this).addClass("active"):t(this).removeClass("active")})}),t(".nav-tabs li").first().click()}},sN:t=>{let e=t.parentElement.querySelector(".inner.scrolling"),i=e.clientWidth;e.scrollLeft+=i},sB:t=>{let e=t.parentElement.querySelector(".inner.scrolling"),i=e.clientWidth;e.scrollLeft-=i},btnNext:'<button onclick="mTP.sN(this)" class="scrollButton right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M15.713 12l-6.01-6.01l-1.415 1.414l4.6 4.6l-4.6 4.593l1.414 1.414L15.713 12z" fill="currentColor"/></g></svg></button>',btnPrev:'<button onclick="mTP.sB(this)" class="scrollButton left"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M8.288 12l6.01 6.01l1.414-1.414l-4.6-4.6l4.6-4.6l-1.414-1.406L8.288 12z" fill="currentColor"/></g></svg></button>',iSize:"w207-h300",noImage:"https://1.bp.blogspot.com/-BYDJ1dpFEhE/X9QnAUfeORI/AAAAAAAAHxw/OjfaqiPHjhAmCgJts39XIg7o4KR-8YtdACNcBGAsYHQ/w300-h225-p-k-no-nu/dagruel-no-image.png"};
-mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Game", "Harem", "Historical", "Isekai", "Horror", "Josei", "Magic", "Mecha", "Military", "Music", "Mystery", "Parody", "Police", "Psychological", "Romance", "Samurai", "School", "School Life", "Sci-Fi", "Seinen", "Shoujo", "Shoujo Ai", "Shounen", "Slice of Life", "Space", "Sports", "Super Power", "Supernatural", "Thriller", "Vampire", "Yuri"];
+mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Game", "Harem", "Historical", "Isekai", "Horror", "Josei", "Magic", "Mecha", "Military", "Music", "Mystery", "Parody", "Police", "Psychological", "Romance", "Samurai", "School", "School Life", "Sci-Fi", "Seinen", "Shoujo", "Shoujo Ai", "Shounen", "Slice of Life", "Space", "Sports", "Super Power", "Supernatural", "Thriller", "Vampire", "Yuri", "Premire League", "Europa League", "League Cup", "FA Cup", "Champions League", "Persahabatan"];
 /*]]>*/</script>
   </b:if>
 <script type='text/javascript'>/*<![CDATA[*/
@@ -1761,7 +1617,7 @@ mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Gam
         <b:widget-setting name='sorting'>NONE</b:widget-setting>
         <b:widget-setting name='link-1'>#</b:widget-setting>
         <b:widget-setting name='link-2'>/#newest</b:widget-setting>
-        <b:widget-setting name='link-0'>p/jadwal.html</b:widget-setting>
+        <b:widget-setting name='link-0'>https://anime-la-bt.blogspot.com/p/jadwal.html</b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'>
         <b:attr name='id' value='menu'/>
@@ -1851,12 +1707,12 @@ mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Gam
     <b:widget id='Header2' locked='true' title='MU Livestreams (Header)' type='Header' version='2' visible='true'>
       <b:widget-settings>
         <b:widget-setting name='displayUrl'>https://muwnews.com/wp-content/uploads/2017/11/logo.png</b:widget-setting>
-        <b:widget-setting name='displayHeight'>50</b:widget-setting>
-        <b:widget-setting name='sectionWidth'>961</b:widget-setting>
+        <b:widget-setting name='displayHeight'>213</b:widget-setting>
+        <b:widget-setting name='sectionWidth'>949</b:widget-setting>
         <b:widget-setting name='useImage'>true</b:widget-setting>
         <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
         <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
-        <b:widget-setting name='displayWidth'>167</b:widget-setting>
+        <b:widget-setting name='displayWidth'>744</b:widget-setting>
       </b:widget-settings>
       <b:includable id='main' var='this'>
         <b:attr name='id' value='logo'/>
@@ -1903,7 +1759,7 @@ mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Gam
         <b:attr name='role' value='search'/>
         <div class='cari-isi'>
   <form action='/search'>
-    <input aria-label='Cari blog ini' autocomplete='off' class='cari-input' name='q' oninput='this.setCustomValidity(&apos;&apos;)' oninvalid='this.setCustomValidity(&apos;Ketik kata kunci pencarian&apos;)' placeholder='Search Anime' required='required' type='text'/>
+    <input aria-label='Cari blog ini' autocomplete='off' class='cari-input' name='q' oninput='this.setCustomValidity(&apos;&apos;)' oninvalid='this.setCustomValidity(&apos;Ketik kata kunci pencarian&apos;)' placeholder='Ketik dengan lengkap' required='required' type='text'/>
     <label aria-label='Cari' class='cari-ikon a f' for='cari'>
       <svg viewBox='0 0 24 24'>
         <circle cx='11.7666' cy='11.7666' r='8.98856'/>
@@ -2054,67 +1910,7 @@ mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Gam
   </b:section>
 </header>
     <b:section cond='data:view.isHomepage' id='slide' showaddelement='true'>
-      <b:widget id='HTML3' locked='false' title='Scroll Label' type='HTML' visible='true'>
-        <b:widget-settings>
-          <b:widget-setting name='content'>&lt;div class=&#39;scrollable-tabs-container&#39;&gt;
-      &lt;div class=&#39;left-arrow&#39;&gt;
-        &lt;svg class=&#39;w-6 h-6&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39; stroke-width=&#39;1.5&#39; viewbox=&#39;0 0 24 24&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39;&gt;
-          &lt;path d=&#39;M15.75 19.5L8.25 12l7.5-7.5&#39; stroke-linecap=&#39;round&#39; stroke-linejoin=&#39;round&#39;/&gt;
-        &lt;/path&gt;&lt;/svg&gt;
-      &lt;/div&gt;
-
-      &lt;ul&gt;
-
-      &lt;li&gt;
-          &lt;a href=&#39;/#newest&#39;&gt;Terbaru&lt;/a&gt;
-        &lt;/li&gt;
-
-&lt;!--li&gt;
-          &lt;a href=&#39;/search/label/Live&#39;&gt;Live Now&lt;/a&gt;
-        &lt;/li--&gt;
-
-        &lt;li&gt;
-          &lt;a href=&#39;/search/label/Premire League&#39;&gt;Premire League&lt;/a&gt;
-        &lt;/li&gt;
-
-        &lt;li&gt;
-          &lt;a href=&#39;/search/label/FA Cup&#39;&gt;FA Cup&lt;/a&gt;
-        &lt;/li&gt;
-
-        &lt;li&gt;
-          &lt;a href=&#39;/search/label/League Cup&#39;&gt;Carabao Cup&lt;/a&gt;
-        &lt;/li&gt;
-
-        &lt;li&gt;
-          &lt;a href=&#39;/search/label/Champions League&#39;&gt;Champions League&lt;/a&gt;
-        &lt;/li&gt;
-
-        &lt;li&gt;
-          &lt;a href=&#39;/search/label/Europa League&#39;&gt;Europa League&lt;/a&gt;
-        &lt;/li&gt;
-        
-        &lt;li&gt;
-          &lt;a href=&#39;/p/klasemen.html&#39;&gt;Table&lt;/a&gt;
-        &lt;/li&gt;
-        
-      &lt;/ul&gt;
-
-      &lt;div class=&#39;right-arrow active&#39;&gt;
-        &lt;svg class=&#39;w-6 h-6&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39; stroke-width=&#39;1.5&#39; viewbox=&#39;0 0 24 24&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39;&gt;
-          &lt;path d=&#39;M8.25 4.5l7.5 7.5-7.5 7.5&#39; stroke-linecap=&#39;round&#39; stroke-linejoin=&#39;round&#39;/&gt;
-        &lt;/path&gt;&lt;/svg&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;script src=&#39;main.js&#39;/&gt;&lt;/script&gt;</b:widget-setting>
-        </b:widget-settings>
-        <b:includable id='main'>
-  <b:include name='widget-title'/>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-</b:includable>
-      </b:widget>
-      <b:widget id='HTML7' locked='false' title='Next Match' type='HTML' visible='true'>
+      <b:widget id='HTML13' locked='false' title='Next Match' type='HTML' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='content'>&lt;!--[ Countdown Design ]--&gt;
 &lt;div data-epl=&#39;EPL&#39; class=&#39;cdCont&#39;&gt;
@@ -2187,13 +1983,13 @@ mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Gam
   </div>
 </b:includable>
       </b:widget>
-      <b:widget id='FeaturedPost1' locked='false' title='Live Now' type='FeaturedPost' version='2' visible='false'>
+      <b:widget id='FeaturedPost1' locked='false' title='Live Now' type='FeaturedPost' version='2' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='showSnippet'>true</b:widget-setting>
           <b:widget-setting name='showPostTitle'>true</b:widget-setting>
-          <b:widget-setting name='postId'>7724397673433318474</b:widget-setting>
+          <b:widget-setting name='postId'>0</b:widget-setting>
           <b:widget-setting name='showFirstImage'>true</b:widget-setting>
-          <b:widget-setting name='useMostRecentPost'>false</b:widget-setting>
+          <b:widget-setting name='useMostRecentPost'>true</b:widget-setting>
         </b:widget-settings>
         <b:includable id='main' var='this'>
           <div class='items'>
@@ -2425,16 +2221,17 @@ mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Gam
             <div class='snip'>
               <b:include cond='data:this.postDisplay.showTitle' name='snippetedPostTitle'/>
               <div class='meta icons'>
-                <span class='blob yellow'/>
-                  <span class='blob blue'/>
-                  <span class='blob purple'/>
-                  <span class='blob red'/>
                 <!--
                 <i class='rating'>PG 13</i>
                 <i class='quality'>HD</i>
                 <svg height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm3.027 4.002c-.83 0-1.319.642-1.319 1.753v.743c0 1.107.48 1.727 1.319 1.727c.69 0 1.138-.435 1.186-1.05H7.36v.114c-.057 1.147-1.028 1.938-2.342 1.938c-1.613 0-2.518-1.028-2.518-2.729v-.747C2.5 6.051 3.414 5 5.018 5c1.318 0 2.29.813 2.342 2v.11H6.213c-.048-.638-.505-1.108-1.186-1.108zm6.14 0c-.831 0-1.319.642-1.319 1.753v.743c0 1.107.48 1.727 1.318 1.727c.69 0 1.139-.435 1.187-1.05H13.5v.114c-.057 1.147-1.028 1.938-2.342 1.938c-1.613 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.751 2.518-2.751c1.318 0 2.29.813 2.342 2v.11h-1.147c-.048-.638-.505-1.108-1.187-1.108z' fill='currentColor'/></svg>
-                <svg height='512' viewBox='0 0 512 512' width='512' xmlns='http://www.w3.org/2000/svg'><path d='M192 448h128m64-240v32c0 70.4-57.6 128-128 128h0c-70.4 0-128-57.6-128-128v-32m128 160v80' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'/><path d='M256 320a78.83 78.83 0 0 1-56.55-24.1A80.89 80.89 0 0 1 176 239V128a79.69 79.69 0 0 1 80-80c44.86 0 80 35.14 80 80v111c0 44.66-35.89 81-80 81Z' fill='currentColor'/></svg>
-              --></div>
+<svg height='512' viewBox='0 0 512 512' width='512' xmlns='http://www.w3.org/2000/svg'><path d='M192 448h128m64-240v32c0 70.4-57.6 128-128 128h0c-70.4 0-128-57.6-128-128v-32m128 160v80' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'/><path d='M256 320a78.83 78.83 0 0 1-56.55-24.1A80.89 80.89 0 0 1 176 239V128a79.69 79.69 0 0 1 80-80c44.86 0 80 35.14 80 80v111c0 44.66-35.89 81-80 81Z' fill='currentColor'/></svg>-->
+              <svg height='36' viewBox='0 0 36 36' width='36' xmlns='http://www.w3.org/2000/svg'><rect fill='none' height='36' stroke='none' width='36' x='0' y='0'/><path d='M8.514 19.828L19.122 9.223l2.121 2.121L10.635 21.95z' fill='#99AAB5'/><path d='M8.515 29.728a2 2 0 0 1-2.828 0l-4.95-4.949a2 2 0 0 1 0-2.828L5.687 17a2 2 0 0 1 2.828 0l4.95 4.95a2 2 0 0 1 0 2.828l-4.95 4.95zm16.262-16.263a1.998 1.998 0 0 1-2.827 0L17 8.515a2 2 0 0 1 0-2.828l4.951-4.95a2 2 0 0 1 2.828 0l4.949 4.95a2 2 0 0 1 .001 2.828l-4.952 4.95z' fill='#55ACEE'/><path d='M12.404 10.283L10.99 6.04c-.448-1.342-1.415-1.415-2.122-.708L6.04 8.161c-.708.707-.635 1.674.707 2.122l4.243 1.414l1.414-1.414z' fill='#99AAB5'/><path d='M17.708 21.949a2.002 2.002 0 0 1-2.829.001l-7.071-7.071a2 2 0 0 1 0-2.829l4.242-4.242a2 2 0 0 1 2.829 0l7.071 7.071c.78.781.78 2.047-.001 2.829l-4.241 4.241z' fill='#CCD6DD'/><path d='M21.016 21.055c-1.952 1.953-4.802 2.269-6.364.708c-1.562-1.562.876-2.29 2.829-4.243c1.953-1.953 2.681-4.39 4.243-2.829c1.561 1.562 1.245 4.411-.708 6.364z' fill='#CCD6DD'/><path d='M27.96 20.182c-2.12-2.122-5.118-1.951-7.071 0c-1.952 1.954-2.121 4.95 0 7.071l7.071-7.071zm-2.828 2.829l2.121 3.535l-3.535-2.121z' fill='#99AAB5'/><path d='M27.813 27.106a.999.999 0 1 1-1.414-1.414a.999.999 0 1 1 1.414 1.414z' fill='#99AAB5'/><path d='M4.27 18.416L5.686 17l7.779 7.777l-1.414 1.415zM17 5.686l1.414-1.414l7.778 7.778l-1.414 1.414zM.735 21.952l1.414-1.415l7.78 7.776l-1.414 1.414zm19.798-19.8L21.946.737l7.781 7.775l-1.413 1.414z' fill='#88C9F9'/><path d='M8.307 7.601a1 1 0 1 1-1.414-1.416A1 1 0 0 1 8.307 7.6z' fill='#99AAB5'/><path d='m23.682 30.431l.002-.051a1 1 0 0 1 1.049-.949c.016.001 2.156.063 3.8-1.58c1.637-1.638 1.578-3.772 1.58-3.801a1 1 0 1 1 1.997-.1c.012.122.123 3.028-2.163 5.314c-2.288 2.287-5.191 2.17-5.314 2.164a1 1 0 0 1-.951-.997z' fill='#FFAC33'/><path d='M24.238 33.989a.998.998 0 0 1 1.33-.943c.107.034 2.877.893 5.964-2.195c3.127-3.126 2.414-6.126 2.382-6.252a1.002 1.002 0 0 1 .716-1.216a.996.996 0 0 1 1.217.701c.046.17 1.077 4.205-2.9 8.181c-4.014 4.016-7.876 2.726-8.038 2.668a1 1 0 0 1-.671-.944z' fill='#FFAC33'/></svg>              
+                  <span class='blob yellow'/>
+                  <span class='blob blue'/>
+                  <span class='blob purple'/>
+                  <span class='blob red'/>
+              </div>
               <b:include cond='data:this.postDisplay.showDate or data:this.postDisplay.showAuthor' name='snippetedPostByline'/>
               <b:if cond='data:this.postDisplay.showSnippet'>
                 <p class='synopsis'>
@@ -2786,26 +2583,24 @@ mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Gam
       <b:class cond='data:skin.vars.body_background.image' name='has-image'/>
       <b:tag cond='data:view.isMultipleItems or data:view.isPost' id='sidebar' name='div'>
       <b:section cond='data:view.isPost' id='sidebar-post' showaddelement='true'>
-        <b:widget id='HTML9' locked='false' title='Jam' type='HTML' visible='true'>
+        <b:widget id='HTML14' locked='false' title='Jam' type='HTML' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div id=&quot;clock&quot;&gt;
   &lt;h2&gt;Waktu Sekarang&lt;/h2&gt;
-&lt;center&gt;
   &lt;div id=&quot;time&quot;&gt;
     &lt;div&gt;
       &lt;span id=&quot;hour&quot;&gt;00&lt;/span&gt;
-      &lt;span&gt;Jam&lt;/span&gt;
+      &lt;span&gt;jam&lt;/span&gt;
     &lt;/div&gt;
     &lt;div&gt;
       &lt;span id=&quot;minutes&quot;&gt;00&lt;/span&gt;
-      &lt;span&gt;Menit&lt;/span&gt;
+      &lt;span&gt;menit&lt;/span&gt;
     &lt;/div&gt;
     &lt;div&gt;
       &lt;span id=&quot;seconds&quot;&gt;00&lt;/span&gt;
-      &lt;span&gt;Detik&lt;/span&gt;
+      &lt;span&gt;detik&lt;/span&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/center&gt;
 &lt;/div&gt;
 &lt;style &gt;
 
@@ -2822,7 +2617,6 @@ mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Gam
 }
 #clock #time {
   display: flex;
-  justify-content: center;
 }
 #clock #time div {
   position: relative;
@@ -2888,27 +2682,11 @@ var interval = setInterval(clock, 1000);
   </div>
 </b:includable>
         </b:widget>
-        <b:widget id='HTML5' locked='false' title='Movie' type='HTML' visible='false'>
-          <b:widget-settings>
-            <b:widget-setting name='content'>&lt;ul id=&quot;rSI&quot; class=&quot;lsn m-0 p-0 grid gtc-r2a&quot;&gt;
-  &lt;script type=&#39;text/javascript&#39;&gt;/*&lt;![CDATA[*/
-    const rSI={cImage:function(t){let e=t,n=e.indexOf(&quot;&lt;img&quot;),a=e.indexOf(&#39;src=&quot;&#39;,n),i=e.indexOf(&#39;&quot;&#39;,a+5),c=e.substr(a+5,i-a-5);return-1!=n&amp;&amp;-1!=a&amp;&amp;-1!=i&amp;&amp;&quot;&quot;!=c?c:this.noImage},compile:function(t){if(&quot;entry&quot;in t.feed){let e=&quot;&quot;;t.feed.entry.forEach(t=&gt;{const n=t.title.$t,a=t.link.find(t=&gt;&quot;alternate&quot;==t.rel).href,i=&quot;media$thumbnail&quot;in t?t.media$thumbnail.url.match(/\/s[0-9]{2}-(w[0-9]+-)?c/)?t.media$thumbnail.url.replace(/\/s[0-9]{2}-(w[0-9]+-)?c/,&quot;/w400-h225-p-k-no-nu&quot;):t.media$thumbnail.url.replace(/\=s[0-9]{2}-(w[0-9]+-)?c/,&quot;=w400-h225-p-k-no-nu&quot;):&quot;content&quot;in t&amp;&amp;this.cImage(t.content.$t);e+=`&lt;li class=&quot;p-y10 grid gtc-c52&quot;&gt;&lt;a class=&quot;block ofc oh&quot; href=&quot;${a}&quot; title=&quot;${n}&quot;&gt;&lt;img class=&quot;ar-3:4 r2 h-auto w-max&quot; src=&quot;${i}&quot; alt=&quot;${n}&quot;&gt;&lt;/a&gt;&lt;a href=&quot;${a}&quot; class=&quot;fs-md fw-400 c-aba clamp oh&quot;&gt;${n}&lt;/a&gt;&lt;/li&gt;`}),document.getElementById(&quot;rSI&quot;).innerHTML=e}},create:function(t){const e=document.createElement(&quot;script&quot;);e.src=t,document.body.appendChild(e)},getRandom:function(t){const e=Math.floor(Math.random()*(t.feed.openSearch$totalResults.$t-this.numb-1+1))+1;this.create(`/feeds/posts/default${0==this.cat?&quot;&quot;:`/-/${this.cat}`}?alt=json-in-script&amp;start-index=${e}&amp;max-results=${this.numb}&amp;callback=rSI.compile`)},noImage:&quot;https://1.bp.blogspot.com/-BYDJ1dpFEhE/X9QnAUfeORI/AAAAAAAAHxw/OjfaqiPHjhAmCgJts39XIg7o4KR-8YtdACNcBGAsYHQ/w300-h225-p-k-no-nu/dagruel-no-image.png&quot;,run:function(t=10,e=!1){if(this.cat=e,this.numb=t,!document.getElementById(&quot;rSI&quot;))return console.log(&quot;Error Not Function&quot;);this.create(`/feeds/posts/default${0==this.cat?&quot;&quot;:`/-/${this.cat}`}?alt=json-in-script&amp;max-results=0&amp;callback=rSI.getRandom`)}};
-    rSI.run(3, &#39;Europa League&#39;);
-  /*]]&gt;*/&lt;/script&gt;
-&lt;/ul&gt;</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <b:include name='widget-title'/>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-</b:includable>
-        </b:widget>
-        <b:widget id='PopularPosts3' locked='true' title='Trending' type='PopularPosts' version='2' visible='true'>
+        <b:widget id='PopularPosts3' locked='true' title='Trending post' type='PopularPosts' version='2' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
             <b:widget-setting name='showThumbnails'>true</b:widget-setting>
-            <b:widget-setting name='showSnippets'>false</b:widget-setting>
+            <b:widget-setting name='showSnippets'>true</b:widget-setting>
             <b:widget-setting name='timeRange'>LAST_WEEK</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main' var='this'>
@@ -2963,7 +2741,7 @@ var interval = setInterval(clock, 1000);
           <a class='fs-md fw-400 c-aba clamp oh' expr:href='data:post.url' title='data:post.title'>
               <data:post.title/>
             </a>
-         <!-- <span class='fs-13 clamp oh wsn'><b>Genre: </b><b:include name='genrePost'/></span> -->
+          <span class='fs-13 clamp oh wsn'><b>Kompetisi : </b><b:include name='genrePost'/></span>
           <b:include name='rating'/>
         </div>
       </b:includable>
@@ -2996,8 +2774,8 @@ var interval = setInterval(clock, 1000);
   </b:if>
 </b:includable>
           <b:includable id='genrePost'>
-        <b:with value='[&quot;Action&quot;,&quot;Adventure&quot;,&quot;Cars&quot;,&quot;Comedy&quot;,&quot;Dementia&quot;,&quot;Demons&quot;,&quot;Drama&quot;,&quot;Ecchi&quot;,&quot;Fantasy&quot;,&quot;Game&quot;,&quot;Harem&quot;,&quot;Historical&quot;,&quot;Horror&quot;,&quot;Josei&quot;,&quot;Kids&quot;,&quot;Magic&quot;,&quot;Martial Arts&quot;,&quot;Mecha&quot;,&quot;Military&quot;,&quot;Music&quot;]' var='genre1'>
-          <b:with value='[&quot;Mystery&quot;,&quot;Parody&quot;,&quot;Police&quot;,&quot;Psychological&quot;,&quot;Romance&quot;,&quot;Samurai&quot;,&quot;School&quot;,&quot;Sci-Fi&quot;,&quot;Seinen&quot;,&quot;Shoujo&quot;,&quot;Shoujo Ai&quot;,&quot;Shounen&quot;,&quot;Shounen Ai&quot;,&quot;Slice of Life&quot;,&quot;Space&quot;,&quot;Sports&quot;,&quot;Super Power&quot;,&quot;Supernatural&quot;,&quot;Thriller&quot;,&quot;Vampire&quot;]' var='genre2'>
+        <b:with value='[&quot;Action&quot;,&quot;Adventure&quot;,&quot;Cars&quot;,&quot;Comedy&quot;,&quot;Dementia&quot;,&quot;Demons&quot;,&quot;Drama&quot;,&quot;Ecchi&quot;,&quot;Fantasy&quot;,&quot;Game&quot;,&quot;Harem&quot;,&quot;Historical&quot;,&quot;Horror&quot;,&quot;Josei&quot;,&quot;Kids&quot;,&quot;Magic&quot;,&quot;Martial Arts&quot;,&quot;Mecha&quot;,&quot;Military&quot;,&quot;Music&quot;,&quot;Premire League&quot;,&quot;Europa League&quot;,&quot;League Cup&quot;,&quot;FA Cup&quot;,&quot;Champions League&quot;,&quot;Persahabatan&quot;]' var='genre1'>
+          <b:with value='[&quot;Mystery&quot;,&quot;Parody&quot;,&quot;Police&quot;,&quot;Psychological&quot;,&quot;Romance&quot;,&quot;Samurai&quot;,&quot;School&quot;,&quot;Sci-Fi&quot;,&quot;Seinen&quot;,&quot;Shoujo&quot;,&quot;Shoujo Ai&quot;,&quot;Shounen&quot;,&quot;Shounen Ai&quot;,&quot;Slice of Life&quot;,&quot;Space&quot;,&quot;Sports&quot;,&quot;Super Power&quot;,&quot;Supernatural&quot;,&quot;Thriller&quot;,&quot;Vampire&quot;,&quot;Rilis&quot;]' var='genre2'>
             <b:loop index='i' values='data:post.labels' var='label'>
               <b:if cond='data:label.name in data:genre1 and data:label.name in data:genre2'>
                 <a class='c-666' expr:href='data:label.url' expr:title='data:label.name'><data:label.name/></a>
@@ -3125,7 +2903,7 @@ var interval = setInterval(clock, 1000);
           <b:includable id='rating'>
         <b:loop values='data:post.labels limit 1' var='label'>
           <span class='flex aic pr-5-svg c-primary-svg fs-13'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' style='vertical-align: -0.125em;' viewBox='0 0 1024 1024' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='m908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5c-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1l-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2c17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9l183.7-179.1c5-4.9 8.3-11.3 9.3-18.3c2.7-17.5-9.5-33.7-27-36.3z' fill='currentColor'/></svg>
-            <!-- post populer -->
+             <!-- post populer -->
             <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Premire League&quot;)'>
                <span>Premire League</span>
               </b:if>
@@ -3144,7 +2922,6 @@ var interval = setInterval(clock, 1000);
               <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Champions League&quot;)'>
                <span>Champions League</span>
               </b:if>
-          
           </span>
         </b:loop>
       </b:includable>
@@ -3235,7 +3012,7 @@ var interval = setInterval(clock, 1000);
         </b:widget>
       </b:section>
       <b:section cond='data:view.isMultipleItems and !data:view.isHomepage' id='sidebar-index' showaddelement='true'>
-        <b:widget id='Label1' locked='false' title='Kompetisi' type='Label' version='2' visible='true'>
+        <b:widget id='Label1' locked='false' title='Labels' type='Label' version='2' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
             <b:widget-setting name='display'>CLOUD</b:widget-setting>
@@ -3284,11 +3061,11 @@ var interval = setInterval(clock, 1000);
             </span>
           </b:loop>
         </div>
-      <!--  <label class='cp' expr:for='data:widget.instanceId + &quot;-w&quot;'>
-          <b:with value='data:labels.length' var='item'>
+        <label class='cp' expr:for='data:widget.instanceId + &quot;-w&quot;'>
+        <!--  <b:with value='data:labels.length' var='item'>
             Show more (+<b:eval expr='data:item - 10'/>)
-          </b:with>
-        </label> -->
+          </b:with> -->
+        </label>
       </b:includable>
           <b:includable id='content'>
   <div class='widget-content'>
@@ -3312,7 +3089,7 @@ var interval = setInterval(clock, 1000);
   </ul>
 </b:includable>
         </b:widget>
-        <b:widget id='BlogArchive1' locked='false' title='Arsip' type='BlogArchive' visible='true'>
+        <b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='showStyle'>FLAT</b:widget-setting>
             <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -3382,7 +3159,7 @@ var interval = setInterval(clock, 1000);
         </b:widget>
       </b:section>
       <b:section cond='data:view.isHomepage' id='sidebar-home' showaddelement='true'>
-        <b:widget id='HTML10' locked='false' title='Berita terbaru' type='HTML' visible='true'>
+        <b:widget id='HTML15' locked='false' title='Berita terbaru' type='HTML' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;a class=&quot;twitter-timeline&quot;
   data-lang=&quot;id&quot; data-dnt=&quot;true&quot; data-theme=&quot;dark&quot;
@@ -3421,312 +3198,10 @@ Tweets by manutd_world
     <data:content/>
 </b:includable>
         </b:widget>
-        <b:widget id='BlogSearch1' locked='true' title='Filter' type='BlogSearch' version='2' visible='false'>
-          <b:includable id='main'>
-            <b:include name='widget-title'/>
-            <b:include name='content'/>
-          </b:includable>
-          <b:includable id='content'>
-            <section class='quickfilter' role='search'>
-              <div class='filters'>
-                <div class='simple opt'>
-                  <!-- List Label -->
-                  <div class='simple dropdown filter'>
-                    <input class='simple hidden chk' id='Genre' name='genre' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Genre'> Genre <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu lg c4'>
-                      <li>
-                        <input class='hidden genre' id='Action' type='checkbox' value='Action'/>
-                        <label for='Action'>Action</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Adventurer' type='checkbox' value='Adventurer'/>
-                        <label for='Adventurer'>Adventurer</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Comedy' type='checkbox' value='Comedy'/>
-                        <label for='Comedy'>Comedy</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Dementia' type='checkbox' value='Dementia'/>
-                        <label for='Dementia'>Dementia</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Demons' type='checkbox' value='Demons'/>
-                        <label for='Demons'>Demons</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Drama' type='checkbox' value='Drama'/>
-                        <label for='Drama'>Drama</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Ecchi' type='checkbox' value='Ecchi'/>
-                        <label for='Ecchi'>Ecchi</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Fantasy' type='checkbox' value='Fantasy'/>
-                        <label for='Fantasy'>Fantasy</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Game' type='checkbox' value='Game'/>
-                        <label for='Game'>Game</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Harem' type='checkbox' value='Harem'/>
-                        <label for='Harem'>Harem</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Historical' type='checkbox' value='Historical'/>
-                        <label for='Historical'>Historical</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Horror' type='checkbox' value='Horror'/>
-                        <label for='Horror'>Horror</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Josei' type='checkbox' value='Josei'/>
-                        <label for='Josei'>Josei</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Magic' type='checkbox' value='Magic'/>
-                        <label for='Magic'>Magic</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Martial Arts' type='checkbox' value='Martial Arts'/>
-                        <label for='Martial Arts'>Martial Arts</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Mecha' type='checkbox' value='Mecha'/>
-                        <label for='Mecha'>Mecha</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Military' type='checkbox' value='Military'/>
-                        <label for='Military'>Military</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Music' type='checkbox' value='Music'/>
-                        <label for='Music'>Music</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Mystery' type='checkbox' value='Mystery'/>
-                        <label for='Mystery'>Mystery</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Parody' type='checkbox' value='Parody'/>
-                        <label for='Parody'>Parody</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Police' type='checkbox' value='Police'/>
-                        <label for='Police'>Police</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Psychological' type='checkbox' value='Psychological'/>
-                        <label for='Psychological'>Psychological</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Romance' type='checkbox' value='Romance'/>
-                        <label for='Romance'>Romance</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Samurai' type='checkbox' value='Samurai'/>
-                        <label for='Samurai'>Samurai</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='School' type='checkbox' value='School'/>
-                        <label for='School'>School</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Sci-Fi' type='checkbox' value='Sci-Fi'/>
-                        <label for='Sci-Fi'>Sci-Fi</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Seinen' type='checkbox' value='Seinen'/>
-                        <label for='Seinen'>Seinen</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Shoujo' type='checkbox' value='Shoujo'/>
-                        <label for='Shoujo'>Shoujo</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Shoujo Ai' type='checkbox' value='Shoujo Ai'/>
-                        <label for='Shoujo Ai'>Shoujo Ai</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Shounen' type='checkbox' value='Shounen'/>
-                        <label for='Shounen'>Shounen</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Slice of Life' type='checkbox' value='Slice of Life'/>
-                        <label for='Slice of Life'>Slice of Life</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Space' type='checkbox' value='Space'/>
-                        <label for='Space'>Space</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Sports' type='checkbox' value='Sports'/>
-                        <label for='Sports'>Sports</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Super Power' type='checkbox' value='Super Power'/>
-                        <label for='Super Power'>Super Power</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Supernatural' type='checkbox' value='Supernatural'/>
-                        <label for='Supernatural'>Supernatural</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Thriller' type='checkbox' value='Thriller'/>
-                        <label for='Thriller'>Thriller</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Vampire' type='checkbox' value='Vampire'/>
-                        <label for='Vampire'>Vampire</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Work Life' type='checkbox' value='Work Life'/>
-                        <label for='Work Life'>Work Life</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Yuri' type='checkbox' value='Yuri'/>
-                        <label for='Yuri'>Yuri</label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class='simple dropdown filter'>
-                    <input class='simple hidden chk' id='Status' name='status' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Status'> Status <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu lg c4'>
-                      <li>
-                        <input class='hidden genre' id='Ongoing' type='checkbox' value='Ongoing'/>
-                        <label for='Ongoing'>Ongoing</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Completed' type='checkbox' value='Completed'/>
-                        <label for='Completed'>Completed</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Dropped' type='checkbox' value='Dropped'/>
-                        <label for='Dropped'>Dropped</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Upcoming' type='checkbox' value='Upcoming'/>
-                        <label for='Upcoming'>Upcoming</label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class='simple dropdown filter'>
-                    <input class='simple hidden chk' id='Type' name='type' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Type'> Type <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu lg c4'>
-                      <li>
-                        <input class='hidden genre' id='Movie' type='checkbox' value='Movie'/>
-                        <label for='Movie'>Movie</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='TV' type='checkbox' value='TV'/>
-                        <label for='TV'>TV</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='OVA' type='checkbox' value='OVA'/>
-                        <label for='OVA'>OVA</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='ONA' type='checkbox' value='ONA'/>
-                        <label for='ONA'>ONA</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Special' type='checkbox' value='Special'/>
-                        <label for='Special'>Special</label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class='simple dropdown filter'>
-                    <input class='simple hidden chk' id='Lang' name='lang' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Lang'> Language <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu lg c4'>
-                      <li>
-                        <input class='hidden genre' id='Sub' type='checkbox' value='Sub'/>
-                        <label for='Sub'>Sub</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Dub' type='checkbox' value='Dub'/>
-                        <label for='Dub'>Dub</label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class='simple dropdown filter'>
-                    <input class='simple hidden chk' id='Country' name='country' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Country'> Country <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu lg c4'>
-                      <li>
-                        <input class='hidden genre' id='Japan' type='checkbox' value='Japan'/>
-                        <label for='Japan'>Japan</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Chinese' type='checkbox' value='Chinese'/>
-                        <label for='Chinese'>Chinese</label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class='simple dropdown filter'>
-                    <input class='simple hidden chk' id='Quality' name='Quality' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Quality'> Quality <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu lg c4'>
-                      <li>
-                        <input class='hidden genre' id='Webrip' type='checkbox' value='Webrip'/>
-                        <label for='Webrip'>Webrip</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='BD' type='checkbox' value='BD'/>
-                        <label for='BD'>BD</label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <b:include name='searchForm'/>
-                <button class='submit' type='submit'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 512 512' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z' fill='currentColor'/></svg>Filter  <span class='count'> </span></button>
-
-                <!-- Hasil -->
-                <div id='result'/>
-                
-<script>/*<![CDATA[*/
-var num = 15;
-var newtab = false;
-$('.submit').click(function(){
-var validator = document.getElementsByClassName('genre');
-var o = [];
-for(var i=0;i<validator.length;i++){
-   if(validator[i].checked){
-    o.push(validator[i].value)
-	}
-}
-window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.join('+') + '?&max-results=' + num, newtab == true ? '_blank' : '_self');
-});
-/*]]>*/</script>
-                
-              </div>
-            </section>
-</b:includable>
-          <b:includable id='searchForm'>
-  <form expr:action='data:blog.searchUrl'>
-    <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-    <b:include name='urlParamsAsFormInput'/>
-    <div class='searchf filter'>
-      <input autocomplete='off' expr:aria-label='data:messages.searchThisBlog' expr:placeholder='data:messages.searchThisBlog' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q'/>
-    </div>
-    <b:include name='searchSubmit'/>
-  </form>
-</b:includable>
-          <b:includable id='searchSubmit'>
-  
-</b:includable>
-        </b:widget>
-        <b:widget id='PopularPosts2' locked='true' title='Trending' type='PopularPosts' version='2' visible='false'>
+        <b:widget id='PopularPosts2' locked='true' title='Trending home' type='PopularPosts' version='2' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
-            <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+            <b:widget-setting name='showThumbnails'>false</b:widget-setting>
             <b:widget-setting name='showSnippets'>false</b:widget-setting>
             <b:widget-setting name='timeRange'>LAST_WEEK</b:widget-setting>
           </b:widget-settings>
@@ -4030,10 +3505,10 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
             </ul>
           </b:includable>
         </b:widget>
-        <b:widget id='HTML8' locked='false' title='Random Post Multi Tab by Label' type='HTML' version='2' visible='false'>
+        <b:widget id='HTML8' locked='false' title='Random Post Multi Tab by Label' type='HTML' version='2' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;section id=&quot;mTP_Slider&quot; class=&quot;top&quot;&gt;
-&lt;script&gt;mTP.run(jQuery, false, 9, 3)&lt;/script&gt;
+&lt;script&gt;mTP.run(jQuery, false, 4, 2)&lt;/script&gt;
 &lt;/section&gt;</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
@@ -4129,332 +3604,30 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
   </div>
 </b:includable>
         </b:widget>
-        <b:widget cond='data:view.isSearch' id='BlogSearch3' locked='true' title='Filter' type='BlogSearch' version='2' visible='false'>
-          <b:includable id='main'>
-            <b:attr name='class' value='BlogSearch'/>
-            <b:include name='content'/>
-          </b:includable>
-          <b:includable id='content'>
-            <section class='quickfilter' role='search'>
-              <div class='filters'>
-                <div class='opt1'>
-                  <!-- List Label -->
-                  <div class='dropdown filter'>
-                    <input class='simple hidden chk' id='Genre' name='genre' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Genre'> Genre <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu lg c4'>
-                      <li>
-                        <input class='hidden genre' id='Action' type='checkbox' value='Action'/>
-                        <label for='Action'>Action</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Adventurer' type='checkbox' value='Adventurer'/>
-                        <label for='Adventurer'>Adventurer</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Comedy' type='checkbox' value='Comedy'/>
-                        <label for='Comedy'>Comedy</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Dementia' type='checkbox' value='Dementia'/>
-                        <label for='Dementia'>Dementia</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Demons' type='checkbox' value='Demons'/>
-                        <label for='Demons'>Demons</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Drama' type='checkbox' value='Drama'/>
-                        <label for='Drama'>Drama</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Ecchi' type='checkbox' value='Ecchi'/>
-                        <label for='Ecchi'>Ecchi</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Fantasy' type='checkbox' value='Fantasy'/>
-                        <label for='Fantasy'>Fantasy</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Game' type='checkbox' value='Game'/>
-                        <label for='Game'>Game</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Harem' type='checkbox' value='Harem'/>
-                        <label for='Harem'>Harem</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Historical' type='checkbox' value='Historical'/>
-                        <label for='Historical'>Historical</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Horror' type='checkbox' value='Horror'/>
-                        <label for='Horror'>Horror</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Josei' type='checkbox' value='Josei'/>
-                        <label for='Josei'>Josei</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Magic' type='checkbox' value='Magic'/>
-                        <label for='Magic'>Magic</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Martial Arts' type='checkbox' value='Martial Arts'/>
-                        <label for='Martial Arts'>Martial Arts</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Mecha' type='checkbox' value='Mecha'/>
-                        <label for='Mecha'>Mecha</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Military' type='checkbox' value='Military'/>
-                        <label for='Military'>Military</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Music' type='checkbox' value='Music'/>
-                        <label for='Music'>Music</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Mystery' type='checkbox' value='Mystery'/>
-                        <label for='Mystery'>Mystery</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Parody' type='checkbox' value='Parody'/>
-                        <label for='Parody'>Parody</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Police' type='checkbox' value='Police'/>
-                        <label for='Police'>Police</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Psychological' type='checkbox' value='Psychological'/>
-                        <label for='Psychological'>Psychological</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Romance' type='checkbox' value='Romance'/>
-                        <label for='Romance'>Romance</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Samurai' type='checkbox' value='Samurai'/>
-                        <label for='Samurai'>Samurai</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='School' type='checkbox' value='School'/>
-                        <label for='School'>School</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Sci-Fi' type='checkbox' value='Sci-Fi'/>
-                        <label for='Sci-Fi'>Sci-Fi</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Seinen' type='checkbox' value='Seinen'/>
-                        <label for='Seinen'>Seinen</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Shoujo' type='checkbox' value='Shoujo'/>
-                        <label for='Shoujo'>Shoujo</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Shoujo Ai' type='checkbox' value='Shoujo Ai'/>
-                        <label for='Shoujo Ai'>Shoujo Ai</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Shounen' type='checkbox' value='Shounen'/>
-                        <label for='Shounen'>Shounen</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Slice of Life' type='checkbox' value='Slice of Life'/>
-                        <label for='Slice of Life'>Slice of Life</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Space' type='checkbox' value='Space'/>
-                        <label for='Space'>Space</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Sports' type='checkbox' value='Sports'/>
-                        <label for='Sports'>Sports</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Super Power' type='checkbox' value='Super Power'/>
-                        <label for='Super Power'>Super Power</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Supernatural' type='checkbox' value='Supernatural'/>
-                        <label for='Supernatural'>Supernatural</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Thriller' type='checkbox' value='Thriller'/>
-                        <label for='Thriller'>Thriller</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Vampire' type='checkbox' value='Vampire'/>
-                        <label for='Vampire'>Vampire</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Work Life' type='checkbox' value='Work Life'/>
-                        <label for='Work Life'>Work Life</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Yuri' type='checkbox' value='Yuri'/>
-                        <label for='Yuri'>Yuri</label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class='dropdown filter'>
-                    <input class='simple hidden chk' id='Status' name='status' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Status'> Status <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu c1'>
-                      <li>
-                        <input class='hidden genre' id='Ongoing' type='checkbox' value='Ongoing'/>
-                        <label for='Ongoing'>Ongoing</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Completed' type='checkbox' value='Completed'/>
-                        <label for='Completed'>Completed</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Dropped' type='checkbox' value='Dropped'/>
-                        <label for='Dropped'>Dropped</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Upcoming' type='checkbox' value='Upcoming'/>
-                        <label for='Upcoming'>Upcoming</label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class='dropdown filter'>
-                    <input class='simple hidden chk' id='Type' name='type' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Type'> Type <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu c1'>
-                      <li>
-                        <input class='hidden genre' id='Movie' type='checkbox' value='Movie'/>
-                        <label for='Movie'>Movie</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='TV' type='checkbox' value='TV'/>
-                        <label for='TV'>TV</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='OVA' type='checkbox' value='OVA'/>
-                        <label for='OVA'>OVA</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='ONA' type='checkbox' value='ONA'/>
-                        <label for='ONA'>ONA</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Special' type='checkbox' value='Special'/>
-                        <label for='Special'>Special</label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class='dropdown filter'>
-                    <input class='simple hidden chk' id='Lang' name='lang' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Lang'> Language <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu c1'>
-                      <li>
-                        <input class='hidden genre' id='Sub' type='checkbox' value='Sub'/>
-                        <label for='Sub'>Sub</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Dub' type='checkbox' value='Dub'/>
-                        <label for='Dub'>Dub</label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class='dropdown filter'>
-                    <input class='simple hidden chk' id='Country' name='country' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Country'> Country <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu c1'>
-                      <li>
-                        <input class='hidden genre' id='Japan' type='checkbox' value='Japan'/>
-                        <label for='Japan'>Japan</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='Chinese' type='checkbox' value='Chinese'/>
-                        <label for='Chinese'>Chinese</label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class='dropdown filter'>
-                    <input class='simple hidden chk' id='Quality' name='Quality' type='checkbox'/>
-                    <label class='simple dropdown-toggle' data-toggle='dropdown' for='Quality'> Quality <span class='simple value' data-label-placement='true'>All</span> </label>
-                    <ul class='simple dropdown-menu c1'>
-                      <li>
-                        <input class='hidden genre' id='Webrip' type='checkbox' value='Webrip'/>
-                        <label for='Webrip'>Webrip</label>
-                      </li>
-                      <li>
-                        <input class='hidden genre' id='BD' type='checkbox' value='BD'/>
-                        <label for='BD'>BD</label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-				<div class='opt2'>
-                <b:include name='searchForm'/>
-                <button class='submit' type='submit'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 512 512' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z' fill='currentColor'/></svg>Filter  <span class='count'> </span></button>
-                <!-- Hasil -->
-                <div id='result'/>
-                </div>
-<script>/*<![CDATA[*/
-var num = 15;
-var newtab = false;
-$('.submit').click(function(){
-var validator = document.getElementsByClassName('genre');
-var o = [];
-for(var i=0;i<validator.length;i++){
-   if(validator[i].checked){
-    o.push(validator[i].value)
-	}
-}
-window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.join('+') + '?&max-results=' + num, newtab == true ? '_blank' : '_self');
-});
-/*]]>*/</script>
-                
-              </div>
-            </section>
-</b:includable>
-          <b:includable id='searchForm'>
-  <form expr:action='data:blog.searchUrl'>
-    <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-    <b:include name='urlParamsAsFormInput'/>
-    <div class='searchf filter'>
-      <input autocomplete='off' expr:aria-label='data:messages.searchThisBlog' expr:placeholder='data:messages.searchThisBlog' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q'/>
-    </div>
-    <b:include name='searchSubmit'/>
-  </form>
-</b:includable>
-          <b:includable id='searchSubmit'>
-  
-</b:includable>
-        </b:widget>
         <b:widget id='Blog1' locked='true' title='Postingan Blog' type='Blog' version='2' visible='true'>
           <b:widget-settings>
+            <b:widget-setting name='showDateHeader'>false</b:widget-setting>
             <b:widget-setting name='commentLabel'>Komentar</b:widget-setting>
+            <b:widget-setting name='style.textcolor'>#0c00e6</b:widget-setting>
             <b:widget-setting name='showShareButtons'>false</b:widget-setting>
             <b:widget-setting name='authorLabel'>Oleh</b:widget-setting>
-            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-            <b:widget-setting name='timestampLabel'>Pada</b:widget-setting>
-            <b:widget-setting name='reactionsLabel'/>
-            <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
-            <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-            <b:widget-setting name='showLocation'>false</b:widget-setting>
-            <b:widget-setting name='showTimestamp'>false</b:widget-setting>
-            <b:widget-setting name='postsPerAd'>1</b:widget-setting>
-            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='showDateHeader'>false</b:widget-setting>
-            <b:widget-setting name='style.textcolor'>#16140f</b:widget-setting>
             <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-            <b:widget-setting name='style.urlcolor'>#010245</b:widget-setting>
-            <b:widget-setting name='postLocationLabel'>Location:</b:widget-setting>
+            <b:widget-setting name='style.urlcolor'>#000000</b:widget-setting>
             <b:widget-setting name='showAuthor'>true</b:widget-setting>
             <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
             <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='showLabels'>false</b:widget-setting>
+            <b:widget-setting name='timestampLabel'>Pada</b:widget-setting>
+            <b:widget-setting name='reactionsLabel'/>
+            <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+            <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+            <b:widget-setting name='showLabels'>true</b:widget-setting>
+            <b:widget-setting name='showLocation'>false</b:widget-setting>
             <b:widget-setting name='postLabelsLabel'/>
+            <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+            <b:widget-setting name='postsPerAd'>1</b:widget-setting>
             <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
             <b:widget-setting name='showInlineAds'>false</b:widget-setting>
             <b:widget-setting name='showReactions'>false</b:widget-setting>
           </b:widget-settings>
@@ -4467,9 +3640,9 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                     <h2 class='lh-2 c-fff fw-500'>Terbaru</h2>
                     <div class='flex aic'>                    
                       <div class='flex aic tabs'>
-                        <!--<a class='tablinks' href='/search'>All</a> -->
-                        <a class='c-mu-h tablinks ' href='/search/label/home'>Kandang</a>
-                        <a class='tablinks c-mu-h' href='/search/label/away'>Tandang</a>
+                        <!--<a class='tablinks' href='/search'>All</a>-->
+                        <a class='tablinks' href='/search/label/home'>Kandang</a>
+                        <a class='tablinks' href='/search/label/away'>Tandang</a>
                         <!--<a class='tablinks' onclick='feelingLucky();'>Random</a>-->
                       </div>
                       
@@ -4770,7 +3943,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
             </div>
           </b:includable>
           <b:includable id='country'>
-            <b:with value='[&quot;Japan&quot;,&quot;Chinese&quot;]' var='Country'>
+            <b:with value='[&quot;Japan&quot;,&quot;Chinese&quot;,&quot;Rilis&quot;]' var='Country'>
             <b:loop index='i' values='data:post.labels' var='label'>
               <b:if cond='data:label.name in data:Country'>
               <a expr:href='data:label.url' rel='tag'>
@@ -4840,9 +4013,9 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
             </b:if>
           </b:includable>
           <b:includable id='genre'>
-            <b:with value='[&quot;Action&quot;,&quot;Adventure&quot;,&quot;Comedy&quot;,&quot;Crime&quot;,&quot;Drama&quot;,&quot;Fantasy&quot;,&quot;Historical&quot;,&quot;Horror&quot;,&quot;Isekai&quot;,&quot;Magical Girls&quot;,&quot;Mecha&quot;,&quot;Medical&quot;,&quot;Mystery&quot;,&quot;Philosophical&quot;,&quot;Psychological&quot;,&quot;Romance&quot;,&quot;Sci-Fi&quot;,&quot;Shoujo Ai&quot;,&quot;Shounen Ai&quot;,&quot;Slice of Life&quot;,&quot;Sports&quot;,&quot;Superhero&quot;,&quot;Thriller&quot;,&quot;Tragedy&quot;,&quot;Wuxia&quot;,&quot;Yaoi&quot;,&quot;Yuri&quot;,&quot;Tsundere&quot;,&quot;Yandere&quot;]' var='Genre'>
-        <b:with value='[&quot;Shounen&quot;,&quot;Cooking&quot;,&quot;Harem&quot;,&quot;Loli&quot;,&quot;Mafia&quot;,&quot;Magic&quot;,&quot;Military&quot;,&quot;Music&quot;,&quot;Reincarnation&quot;,&quot;Reverse Harem&quot;,&quot;Samurai&quot;,&quot;School Life&quot;,&quot;Supernatural&quot;,&quot;Survival&quot;,&quot;Time Travel&quot;,&quot;Vampire&quot;,&quot;Video Games&quot;,&quot;Demon&quot;,&quot;Monsters&quot;,&quot;Martial Arts&quot;,&quot;Virtual Reality&quot;,&quot;Demons&quot;,&quot;Monster Girls&quot;,&quot;Monsters&quot;]' var='Genre2'>
-          <b:with value='[&quot;Drama&quot;]' var='Genre3'>
+            <b:with value='[&quot;Action&quot;,&quot;Adventure&quot;,&quot;Censored&quot;,&quot;Comedy&quot;,&quot;Crime&quot;,&quot;Drama&quot;,&quot;Fantasy&quot;,&quot;Historical&quot;,&quot;Horror&quot;,&quot;Isekai&quot;,&quot;Magical Girls&quot;,&quot;Mecha&quot;,&quot;Medical&quot;,&quot;Mystery&quot;,&quot;Philosophical&quot;,&quot;Psychological&quot;,&quot;Romance&quot;,&quot;Sci-Fi&quot;,&quot;Shoujo Ai&quot;,&quot;Shounen Ai&quot;,&quot;Slice of Life&quot;,&quot;Sports&quot;,&quot;Superhero&quot;,&quot;Thriller&quot;,&quot;Tragedy&quot;,&quot;Wuxia&quot;,&quot;Yaoi&quot;,&quot;Yuri&quot;,&quot;Tsundere&quot;,&quot;Yandere&quot;]' var='Genre'>
+        <b:with value='[&quot;Shounen&quot;,&quot;Cooking&quot;,&quot;Harem&quot;,&quot;Loli&quot;,&quot;Mafia&quot;,&quot;Magic&quot;,&quot;Military&quot;,&quot;Music&quot;,&quot;Reincarnation&quot;,&quot;Reverse Harem&quot;,&quot;Samurai&quot;,&quot;School Life&quot;,&quot;Supernatural&quot;,&quot;Survival&quot;,&quot;Time Travel&quot;,&quot;Vampire&quot;,&quot;Video Games&quot;,&quot;Demon&quot;,&quot;Monsters&quot;,&quot;Martial Arts&quot;,&quot;Virtual Reality&quot;,&quot;Demons&quot;,&quot;Monster Girls&quot;,&quot;Monsters&quot;,&quot;Uncensored&quot;,&quot;Rilis&quot;,&quot;Premire League&quot;,&quot;Europa League&quot;,&quot;League Cup&quot;,&quot;FA Cup&quot;,&quot;Champions League&quot;,&quot;Persahabatan&quot;]' var='Genre2'>
+          <b:with value='[&quot;Drama&quot;,&quot;Rilis&quot;]' var='Genre3'>
             <b:loop index='i' values='data:post.labels' var='label'>
               <b:if cond='data:label.name in data:Genre or data:label.name in data:Genre2 or data:label.name in data:Genre3'>
               <a expr:href='data:label.url' rel='tag'>
@@ -4904,14 +4077,10 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
 <b:eval expr='&quot;#&quot; + data:widget.instanceId + &quot;-w:checked&quot;'/> ~ :is(ul,span) {
  max-height: 100vh;transition: max-height .2s;display: inline;}
 #Blog1-w:checked ~ .plus {display: none;}</style>
-              Watch online <b><data:post.title/></b> bahasa Indonesia,  
-            Streaming anime <data:post.title/> sub indo,
+              Watch online <b><data:post.title/></b> ,  
+            Streaming <data:post.title/> Vidio.
             <input class='hidden' expr:id='data:widget.instanceId + &quot;-w&quot;' type='checkbox'/>
-            <label class='cp more plus' expr:for='data:widget.instanceId + &quot;-w&quot;'>+more</label><span class='i-block'>
-            Mau nonton anime terbaik dengan subtitle Indonesia? Streaming anime Jepang dari anime <data:post.title/>,
-            website streaming anime subtitle indonesia dan nonton anime indo update setiap hari, TV <data:post.title/>,
-            Terbaru Terupdate dan Terlengkap dengan Kualitas 1080p, 720p. 480p, 360p Anime Sub Indo.
-            <label class='cp more minus' expr:for='data:widget.instanceId + &quot;-w&quot;'>-less</label></span>
+
                             </b:includable>
           <b:includable id='linkShare'>
             <b:with value='&quot;window.prompt(\&quot;Copy to clipboard: Ctrl+C, Enter\&quot;, \&quot;&quot; + data:originalUrl + &quot;\&quot;); return false;&quot;' var='onclick'>
@@ -4968,7 +4137,8 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
               </section>
               <!-- Bawah post -->
               <!-- ShareThis BEGIN --><div class='sharethis-inline-reaction-buttons'/><!-- ShareThis END -->
-             <!-- <section id='info' itemscope='' itemtype='http://schema.org/Movie'>
+              <!--
+              <section id='info' itemscope='' itemtype='http://schema.org/Movie'>
                 <div class='thumb'>
                   <div>
                     <b:with value='data:post.featuredImage.isResizable ? resizeImage(data:post.featuredImage, 600, &quot;1:2&quot;) : data:post.thumbnail' var='image'>
@@ -5013,7 +4183,8 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
                     </span>
                   </div>
                 </div>
-              </section> -->
+              </section>
+            -->
             </article> 
             <b:include data='post' name='postMeta'/>
           </b:includable>
@@ -5049,7 +4220,7 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
                     <b:if cond='data:post.featuredImage'>
                       <img class='block r-025 w-max all-02s f-img:hover' expr:alt='data:post.title' expr:src='data:image' loading='lazy'/>
                       <b:else/>
-                      <span class='post-thumb'>Gambar</span>
+                      <span class='post-thumb'>....</span>
                     </b:if>
                   </b:with>
                 </a>
@@ -5172,7 +4343,7 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
             },
           </b:includable>
           <b:includable id='postPagination'>
-            <div class='blog-pager meta flexe aic' id='blog-pager'>
+            <div class='blog-pager meta flex aic' id='blog-pager'>
               <b:include cond='data:newerPageUrl' name='previousPageLink'/>
               <b:include cond='data:olderPageUrl' name='nextPageLink'/>
             </div>
@@ -5306,7 +4477,7 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
             <b:include data='{ iconClass: (&quot;touch-icon sharing-&quot; + data:platform.key) }' expr:name='data:platform.key + &quot;Icon&quot;'/>
           </b:includable>
           <b:includable id='status'>
-            <b:with value='[&quot;Ongoing&quot;,&quot;Airing&quot;,&quot;Completed&quot;,&quot;Dropped&quot;,&quot;Upcoming&quot;]' var='Status'>
+            <b:with value='[&quot;Ongoing&quot;,&quot;Airing&quot;,&quot;Completed&quot;,&quot;Dropped&quot;,&quot;Upcoming&quot;,&quot;Rilis&quot;]' var='Status'>
             <b:loop index='i' values='data:post.labels' var='label'>
               <b:if cond='data:label.name in data:Status'>
               <a expr:href='data:label.url' rel='tag'>
@@ -5336,7 +4507,7 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
           <b:includable id='threadedComments-modifV2' var='post'>
             <div class='r4 bc-1c1 p-15' id='comments'>
               <div class='flex jcsb'>
-                <!--<h3>Comments</h3>-->
+               <!-- <h3>Comments</h3> -->
                 <div class='tabs'>
                 <span class='tablinks' id='defaultOpen' onclick='openTab(event, &apos;disqus_thread&apos;)'>Komentar</span>
   <span class='tablinks' onclick='openTab(event, &apos;comment&apos;)'>Report <b:if cond='data:post.numberOfComments &gt; 0'><data:post.numberOfComments/></b:if></span>
@@ -5483,35 +4654,34 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
     </b:loop>
   </b:if>
 </b:with>
-            
             <!-- Dalam Gambar KB 11111 -->
             <div class='absolute b-0 r-0 fs-13 c-eee brr5 tlr8 dir ttu'>
               <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Premire League&quot;)'>
-               <span class='dub'>EPL</span>
+               <span class='epl'>EPL</span>
               </b:if>
               <b:if cond='data:post.labels any (l =&gt; l.name == &quot;FA Cup&quot;)'>
-               <span class='tv'>FA</span>
+               <span class='fa'>FA</span>
               </b:if>
               <b:if cond='data:post.labels any (l =&gt; l.name == &quot;League Cup&quot;)'>
-               <span class='movie'>Carabao</span>
+               <span class='lc'>Carabao</span>
               </b:if>
               <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Europa League&quot;)'>
-               <span class='ova'>UEL</span>
+               <span class='uel'>UEL</span>
               </b:if>
               <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Persahabatan&quot;)'>
-               <span class='ona'>EXB</span>
+               <span class='exb'>EXB</span>
               </b:if>
               <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Champions league&quot;)'>
-               <span class='special'>UCL</span>
+               <span class='ucl'>UCL</span>
               </b:if>
               <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Leg 1&quot;)'>
-               <span class='id'>Leg 1</span>
+               <span class='leg'>Leg 1</span>
               </b:if>
               <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Leg 2&quot;)'>
-               <span class='id'>Leg 2</span>
+               <span class='leg'>Leg 2</span>
                </b:if>
-            </div> 
             
+            </div>            
           </b:includable>
           <b:includable id='thumbList' var='post'>
             <div class='hentry play c:hover-eee' role='feed'>
@@ -5520,14 +4690,14 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
                 <b:if cond='data:post.featuredImage'>
                   <img class='ar-2sx h-max w-max' expr:alt='data:post.title' expr:src='data:image' loading='lazy'/>
                   <b:else/>
-                  <span class='post-thumb'>No image</span>
+                  <span class='post-thumb'>....</span><!--[no image]-->
                 </b:if>
               </b:with>
                 <b:include data='post' name='thumbLabel'/>
             </a>
             <h3 class='clamp oh tac mt-8'>
               <b:if cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
-                <a class='fs-md fw-400 c-mu-h' expr:href='data:post.link ?: data:post.url'><data:post.title/></a>
+                <a class='fs-md fw-400 c-aba' expr:href='data:post.link ?: data:post.url'><data:post.title/></a>
                 <b:else/>
                 <data:post.title/>
               </b:if>
@@ -5535,7 +4705,7 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
                </div>
           </b:includable>
           <b:includable id='type'>
-            <b:with value='[&quot;TV&quot;,&quot;Movie&quot;,&quot;OVA&quot;,&quot;ONA&quot;,&quot;Special&quot;]' var='Format'>
+            <b:with value='[&quot;TV&quot;,&quot;Movie&quot;,&quot;OVA&quot;,&quot;ONA&quot;,&quot;Special&quot;,&quot;Rilis&quot;]' var='Format'>
             <b:loop index='i' values='data:post.labels' var='label'>
               <b:if cond='data:label.name in data:Format'>
               <a expr:href='data:label.url' rel='tag'>
@@ -5701,7 +4871,7 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
       <b:include cond='data:imagePlacement != &quot;REPLACE&quot;' name='description'/>
     </div>
     <b:include cond='data:imagePlacement == &quot;BEHIND&quot;' name='behindImageStyle'/>
-          <div class='copyright'>Copyright &#169; <script>document.write(new Date().getFullYear())</script> <data:blog.title/>
+          <div class='copyright'>Copyright &#169; 2011 - <script>document.write(new Date().getFullYear())</script> <data:blog.title/>
           <div class='disclaim'>Didukung oleh <a href='https://catsnthing.com/profile.php?creator=GKBDZX.link' target='_blank'>blogger</a> Tema <a href='https://foot.wiki/profile.php?emissionhex=T2IXP1.link' target='_blank'>EmissionHex</a></div>
           </div>
           <!-- https://icon-sets.iconify.design/ -->
@@ -5712,7 +4882,7 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
           
           </div>
           <!-- warning -->
-          <div class='disclaim'>Disclaimer: This content is provided and hosted by a 3rd party server. <data:blog.title/> does not host or upload this material and is not responsible for the content.</div>
+         <div class='disclaim'>Disclaimer: This content is provided and hosted by a 3rd party server. <a expr:href='data:blog.homepageUrl' target='_blank'><data:blog.title/></a> does not host or upload this material and is not responsible for the content.</div>
   </b:includable>
         <b:includable id='behindImageStyle'>
     <b:if cond='data:sourceUrl'>
@@ -5778,11 +4948,11 @@ max-height: 0;overflow: hidden;transition: max-height .2s;}
           <b:widget-setting name='link-3'>#</b:widget-setting>
           <b:widget-setting name='sorting'>NONE</b:widget-setting>
           <b:widget-setting name='text-1'>Report</b:widget-setting>
-          <b:widget-setting name='link-1'>p/report.html</b:widget-setting>
+          <b:widget-setting name='link-1'>/p/report.html</b:widget-setting>
           <b:widget-setting name='text-0'>Contact</b:widget-setting>
           <b:widget-setting name='link-2'>/p/panduan.html</b:widget-setting>
           <b:widget-setting name='text-3'>Naik</b:widget-setting>
-          <b:widget-setting name='link-0'>p/kontak.html</b:widget-setting>
+          <b:widget-setting name='link-0'>/p/kontak.html</b:widget-setting>
           <b:widget-setting name='text-2'>Panduan</b:widget-setting>
         </b:widget-settings>
         <b:includable id='main'>
@@ -6230,98 +5400,8 @@ function feelingLucky(){
   };
   (function (e) {
     if (&quot;function&quot; != typeof e || &quot;object&quot; != typeof _liveSearch) return !1;
-    eval(function(p,a,c,k,e,d){e=function(c){return(c&lt;a?&quot;&quot;:e(parseInt(c/a)))+((c=c%a)&gt;35?String.fromCharCode(c+29):c.toString(36))};if(!&#39;&#39;.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return&#39;\\w+&#39;};c=1;};while(c--)if(k[c])p=p.replace(new RegExp(&#39;\\b&#39;+e(c)+&#39;\\b&#39;,&#39;g&#39;),k[c]);return p;}(&#39;F a=[&quot;&quot;,&quot;\\c\\f\\V\\b\\e\\n\\b\\h&quot;,&quot;\\G\\i\\e\\h\\c\\y\\c\\f\\c&quot;,&quot;\\G\\g\\c\\t\\b\\y\\f\\b\\e\\h\\i\\w\\y\\c\\d\\b\\q&quot;,&quot;\\z\\b\\d\\1O\\o\\v\\j\\n\\c\\j\\z\\T\\g\\c\\b\\j\\d\\N\\b\\i\\d&quot;,&quot;\\g\\b\\u\\d&quot;,&quot;\\r\\E&quot;,&quot;\\A\\o\\d\\d\\o\\q&quot;,&quot;\\U\\c\\n\\d\\w&quot;,&quot;\\i\\f\\f&quot;,&quot;\\g\\b\\j\\z\\d\\w&quot;,&quot;\\i\\g\\o\\f\\b\\f\\d&quot;,&quot;\\d\\e\\h\\z\\b\\d&quot;,&quot;\\k\\n\\c\\t\\s\\i\\g\\e\\f\\f\\x\\m\\g\\c\\t\\b\\y\\f\\b\\e\\h\\i\\w\\y\\c\\d\\b\\q\\m\\l\\k\\p\\n\\c\\t\\l&quot;,&quot;\\w\\d\\q\\g&quot;,&quot;\\e\\r\\r\\b\\j\\n&quot;,&quot;\\A\\o\\n\\B&quot;,&quot;\\h\\b\\f\\c\\H\\b&quot;,&quot;\\o\\j&quot;,&quot;\\f\\i\\h\\o\\g\\g&quot;,&quot;\\i\\g\\c\\i\\C&quot;,&quot;\\h\\b\\q\\o\\t\\b&quot;,&quot;\\o\\u\\u&quot;,&quot;\\f\\c\\H\\b\\J\\q\\e\\z\\b&quot;,&quot;\\q\\e\\d\\i\\w&quot;,&quot;\\p&quot;,&quot;\\h\\b\\r\\g\\e\\i\\b&quot;,&quot;\\x&quot;,&quot;\\q\\b\\n\\c\\e\\I\\d\\w\\v\\q\\A\\j\\e\\c\\g&quot;,&quot;\\v\\h\\g&quot;,&quot;\\i\\o\\j\\d\\b\\j\\d&quot;,&quot;\\I\\d&quot;,&quot;\\k\\c\\q\\z&quot;,&quot;\\c\\j\\n\\b\\E\\1a\\u&quot;,&quot;\\f\\h\\i\\x\\m&quot;,&quot;\\m&quot;,&quot;\\f\\v\\A\\f\\d\\h&quot;,&quot;\\j\\o\\J\\q\\e\\z\\b&quot;,&quot;\\G\\i\\e\\h\\c\\y\\c\\j\\r\\v\\d&quot;,&quot;\\C\\b\\B\\v\\r&quot;,&quot;\\t\\e\\g&quot;,&quot;\\k\\i\\b\\j\\d\\b\\h\\s\\i\\g\\e\\f\\f\\x\\m\\r\\c\\j\\H\\E\\m\\l\\k\\c\\s\\i\\g\\e\\f\\f\\x\\m\\u\\e\\s\\u\\e\\y\\f\\B\\j\\i\\s\\u\\e\\y\\f\\r\\c\\j\\m\\l\\k\\p\\c\\l\\k\\p\\i\\b\\j\\d\\b\\h\\l&quot;,&quot;\\z\\b\\d&quot;,&quot;\\f\\c\\d\\b&quot;,&quot;\\p\\u\\b\\b\\n\\f\\p\\r\\o\\f\\d\\f\\p\\n\\b\\u\\e\\v\\g\\d&quot;,&quot;\\D\\f\\o\\j&quot;,&quot;\\u\\c\\g\\d\\b\\h\\Z\\e\\A\\b\\g&quot;,&quot;\\g\\e\\A\\b\\g\\1c&quot;,&quot;\\s&quot;,&quot;\\D\\f\\o\\j\\r&quot;,&quot;\\b\\j\\d\\h\\B&quot;,&quot;\\u\\b\\b\\n&quot;,&quot;\\d\\c\\d\\g\\b&quot;,&quot;\\w\\h\\b\\u&quot;,&quot;\\e\\g\\d\\b\\h\\j\\e\\d\\b&quot;,&quot;\\h\\b\\g&quot;,&quot;\\u\\c\\j\\n&quot;,&quot;\\g\\c\\j\\C&quot;,&quot;\\1b\\s&quot;,&quot;\\D\\o\\c\\j&quot;,&quot;\\d\\b\\h\\q&quot;,&quot;\\q\\e\\r&quot;,&quot;\\i\\e\\d\\b\\z\\o\\h\\B&quot;,&quot;\\k\\g\\c\\l\\k\\e\\s\\w\\h\\b\\u\\x\\m&quot;,&quot;\\m\\l\\k\\n\\c\\t\\s\\i\\g\\e\\f\\f\\x\\m\\g\\c\\t\\b\\y\\f\\b\\e\\h\\i\\w\\y\\d\\w\\v\\q\\A\\m\\l\\k\\c\\q\\z\\s\\f\\h\\i\\x\\m&quot;,&quot;\\m\\l\\k\\p\\n\\c\\t\\l\\k\\n\\c\\t\\s\\i\\g\\e\\f\\f\\x\\m\\o\\t\\b\\h\\m\\l\\k\\n\\c\\t\\s\\i\\g\\e\\f\\f\\x\\m\\e\\v\\d\\o\\d\\c\\d\\g\\b\\m\\l&quot;,&quot;\\k\\p\\n\\c\\t\\l\\k\\f\\r\\e\\j\\s\\i\\g\\e\\f\\f\\x\\m\\g\\c\\t\\b\\y\\q\\b\\d\\e\\m\\l&quot;,&quot;\\k\\p\\f\\r\\e\\j\\l\\k\\p\\n\\c\\t\\l\\k\\p\\e\\l\\k\\p\\g\\c\\l&quot;,&quot;\\b\\e\\i\\w&quot;,&quot;\\k\\v\\g\\l&quot;,&quot;\\k\\p\\v\\g\\l&quot;,&quot;\\k\\r\\l\\k\\i\\b\\j\\d\\b\\h\\l\\m&quot;,&quot;\\m\\s\\X\\c\\n\\e\\C\\s\\n\\c\\s\\d\\b\\q\\v\\C\\e\\j\\k\\p\\i\\b\\j\\d\\b\\h\\l\\k\\p\\r\\l&quot;,&quot;\\k\\r\\l\\k\\i\\b\\j\\d\\b\\h\\l\\Y\\h\\h\\o\\h\\k\\p\\i\\b\\j\\d\\b\\h\\l\\k\\p\\r\\l&quot;,&quot;\\e\\D\\e\\E&quot;];F W=[a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7],a[8],a[9],a[10],a[11],a[12],a[13],a[14],a[15],a[16],a[17],a[18],a[19],a[Q],a[R],a[S],a[P],a[M],a[O],a[1K],a[1J],a[1I],a[1N],a[1M],a[K],a[1L],a[1E],a[1D],a[L],a[1C],a[1H]];F 1G=[a[1F],a[10],a[1X],a[1W],a[1V],a[1Z],a[0],a[1Y],a[1R],a[1Q],a[1P],a[1U],a[1T],a[L],a[1S],a[1l],a[1k],a[K],a[1j],a[1o],a[1n],a[1m],a[1f],a[1e],a[1d],a[1i],a[1h],a[1g],a[1p],a[1y],a[1x],a[1w],a[1B],a[1A],a[1z],a[1s],a[1r],a[1q],a[1v],a[1u],a[1t],a[18]]&#39;,62,124,&#39;||||||||||_0x6695|x65|x69|x74|x61|x73|x6C|x72|x63|x6E|x3C|x3E|x22|x64|x6F|x2F|x6D|x70|x20|x76|x66|x75|x68|x3D|x2D|x67|x62|x79|x6B|x6A|x78|var|x2E|x7A|x24|x49|31|35|24|x52|25|23|20|21|22|x43|x77|x48|_0x37b7|x54|x45|x4C|||||||||||x4F|x2C|x3A|58|57|56|61|60|59|52|51|50|55|54|53|62|71|70|69|74|73|72|65|64|63|68|67|66|36|34|33|38|_0xdbcd|37|28|27|26|32|30|29|x42|46|45|44|49|48|47|41|40|39|43|42&#39;.split(&#39;|&#39;),0,{}));eval(function(p,a,c,k,e,d){e=function(c){return(c&lt;a?&quot;&quot;:e(parseInt(c/a)))+((c=c%a)&gt;35?String.fromCharCode(c+29):c.toString(36))};if(!&#39;&#39;.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return&#39;\\w+&#39;};c=1;};while(c--)if(k[c])p=p.replace(new RegExp(&#39;\\b&#39;+e(c)+&#39;\\b&#39;,&#39;g&#39;),k[c]);return p;}(&#39;1v f=[&quot;&quot;];1a t=()=&gt;{m t=e(`${f[0]}${b[0]}${f[0]}${h[b[1]]||b[2]}${f[0]}${b[0]}${f[0]}`),i=e(b[3]),l=t[0][b[4]]();i[b[9]]({1m:l[b[5]]+b[6],1l:l[b[7]]+b[6],1n:l[b[8]]+b[6]})},i=(t)=&gt;{e(t[b[12]])[b[11]](b[3])[b[10]]||a()},l=(l)=&gt;{0!=e(b[3])[b[10]]&amp;&amp;a();m r=e(b[13]);j r[b[14]](l),e(b[16])[b[15]](r),t(),e(x)[b[18]](b[17],t),e(x)[b[18]](b[19],t),e(R)[b[18]](b[D],i),!0},a=()=&gt;{0!=e(b[3])[b[10]]&amp;&amp;e(b[3])[b[K]](),e(x)[b[v]](b[17],t),e(x)[b[v]](b[19],t),e(R)[b[v]](b[D],i)},r=(g)=&gt;{j h[b[z]]?g[b[I]](/\\/s[0-9]{2}-(w[0-9]+-)?c/)?g[b[C]](/\\/s[0-9]{2}-(w[0-9]+-)?c/,`${f[0]}${b[A]}${f[0]}${h[b[z]]}${f[0]}${b[0]}${f[0]}`):g[b[C]](/\\=s[0-9]{2}-(w[0-9]+-)?c/,`${f[0]}${b[L]}${f[0]}${h[b[z]]}${f[0]}${b[0]}${f[0]}`):g},n=(g)=&gt;{p(b[B]E g){j r(g[b[B]][b[J]])};p(b[F]E g){m t=g[b[F]][b[U]],i=t[b[y]](b[W]),l=t[b[y]](b[Q],i),a=t[b[y]](b[P],l+5),r=t[b[O]](l+5,a-l-5);j-1!=i&amp;&amp;-1!=l&amp;&amp;-1!=a&amp;&amp;b[0]!=r?r:h[b[G]]||b[0]};j h[b[G]]||b[0]};m s=e(d[0]);p(0!=s[d[1]]){m t;s[d[1h]](d[2],M(){0!=e(u)[d[3]]()[d[1]]&amp;&amp;e(u)[d[3]]()[d[1]]&gt;=4?(S(t),t=1g(()=&gt;{p(e(u)[d[3]]()[d[1]]&lt;=4){j!1};m t=e(u)[d[3]]();l(d[4]),e[d[1i]]({1j:d[5],1k:`${f[0]}${d[6]}${f[0]}${h[d[7]]||d[6]}${f[0]}${d[8]}${f[0]}`,1o:{1p:d[9],q:`${f[0]}${d[6]}${f[0]}${h[d[10]]?`${f[0]}${d[11]}${f[0]}${h[d[10]]}${f[0]}${d[12]}${f[0]}`:d[6]}${f[0]}${d[13]}${f[0]}${t}${f[0]}${d[13]}${f[0]}`,&quot;\\1f\\X\\Y\\Z\\1d\\1e\\H\\1b\\1c\\1w\\H&quot;:A},1x:d[14],1y:(k)=&gt;{p(d[15]E k[d[16]]){m t=d[6];$[d[Q]](k[d[16]][d[15]],M(k,o){m T=o[d[18]][d[17]],V=n(o),N=o[d[z]][d[v]]((k)=&gt;{j d[D]==k[d[K]]})[d[19]],s=o[d[B]][d[L]]((k)=&gt;{j k[d[C]]})[d[A]](d[I]);t+=`${f[0]}${d[J]}${f[0]}${N}${f[0]}${d[F]}${f[0]}${V}${f[0]}${d[U]}${f[0]}${T}${f[0]}${d[W]}${f[0]}${s}${f[0]}${d[y]}${f[0]}`}),l(`${f[0]}${d[P]}${f[0]}${t}${f[0]}${d[O]}${f[0]}`)}1t{l(`${f[0]}${d[G]}${f[0]}${t}${f[0]}${d[1u]}${f[0]}`)}},1s:(k)=&gt;{j l(d[1q])}})},1r)):0==e(u)[d[3]]()[d[1]]&amp;&amp;(S(t),a())})}&#39;,62,97,&#39;|||||||||||_0x37b7||_0xdbcd||_0xb634|_0xc405x7|_liveSearch||return|_0xc405x9||let||_0xc405xa|if|||||this|22||window|33|23|25|28|26|20|in|30|37|x73|24|29|21|27|function|_0xc405xd|36|35|34|document|clearTimeout|_0xc405xb|31|_0xc405xc|32|x61|x78|x2D|||||||||||const|x75|x6C|x72|x65|x6D|setTimeout|41|40|type|url|top|left|width|data|alt|39|500|error|else|38|var|x74|dataType|success&#39;.split(&#39;|&#39;),0,{}));
+    eval(function(p,a,c,k,e,d){e=function(c){return(c&lt;a?&quot;&quot;:e(parseInt(c/a)))+((c=c%a)&gt;35?String.fromCharCode(c+29):c.toString(36))};if(!&#39;&#39;.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return&#39;\\w+&#39;};c=1;};while(c--)if(k[c])p=p.replace(new RegExp(&#39;\\b&#39;+e(c)+&#39;\\b&#39;,&#39;g&#39;),k[c]);return p;}(&#39;F a=[&quot;&quot;,&quot;\\c\\f\\V\\b\\e\\n\\b\\h&quot;,&quot;\\G\\i\\e\\h\\c\\y\\c\\f\\c&quot;,&quot;\\G\\g\\c\\t\\b\\y\\f\\b\\e\\h\\i\\w\\y\\c\\d\\b\\q&quot;,&quot;\\z\\b\\d\\1O\\o\\v\\j\\n\\c\\j\\z\\T\\g\\c\\b\\j\\d\\N\\b\\i\\d&quot;,&quot;\\g\\b\\u\\d&quot;,&quot;\\r\\E&quot;,&quot;\\A\\o\\d\\d\\o\\q&quot;,&quot;\\U\\c\\n\\d\\w&quot;,&quot;\\i\\f\\f&quot;,&quot;\\g\\b\\j\\z\\d\\w&quot;,&quot;\\i\\g\\o\\f\\b\\f\\d&quot;,&quot;\\d\\e\\h\\z\\b\\d&quot;,&quot;\\k\\n\\c\\t\\s\\i\\g\\e\\f\\f\\x\\m\\g\\c\\t\\b\\y\\f\\b\\e\\h\\i\\w\\y\\c\\d\\b\\q\\m\\l\\k\\p\\n\\c\\t\\l&quot;,&quot;\\w\\d\\q\\g&quot;,&quot;\\e\\r\\r\\b\\j\\n&quot;,&quot;\\A\\o\\n\\B&quot;,&quot;\\h\\b\\f\\c\\H\\b&quot;,&quot;\\o\\j&quot;,&quot;\\f\\i\\h\\o\\g\\g&quot;,&quot;\\i\\g\\c\\i\\C&quot;,&quot;\\h\\b\\q\\o\\t\\b&quot;,&quot;\\o\\u\\u&quot;,&quot;\\f\\c\\H\\b\\J\\q\\e\\z\\b&quot;,&quot;\\q\\e\\d\\i\\w&quot;,&quot;\\p&quot;,&quot;\\h\\b\\r\\g\\e\\i\\b&quot;,&quot;\\x&quot;,&quot;\\q\\b\\n\\c\\e\\I\\d\\w\\v\\q\\A\\j\\e\\c\\g&quot;,&quot;\\v\\h\\g&quot;,&quot;\\i\\o\\j\\d\\b\\j\\d&quot;,&quot;\\I\\d&quot;,&quot;\\k\\c\\q\\z&quot;,&quot;\\c\\j\\n\\b\\E\\1a\\u&quot;,&quot;\\f\\h\\i\\x\\m&quot;,&quot;\\m&quot;,&quot;\\f\\v\\A\\f\\d\\h&quot;,&quot;\\j\\o\\J\\q\\e\\z\\b&quot;,&quot;\\G\\i\\e\\h\\c\\y\\c\\j\\r\\v\\d&quot;,&quot;\\C\\b\\B\\v\\r&quot;,&quot;\\t\\e\\g&quot;,&quot;\\k\\i\\b\\j\\d\\b\\h\\s\\i\\g\\e\\f\\f\\x\\m\\r\\c\\j\\H\\E\\m\\l\\k\\c\\s\\i\\g\\e\\f\\f\\x\\m\\u\\e\\s\\u\\e\\y\\f\\B\\j\\i\\s\\u\\e\\y\\f\\r\\c\\j\\m\\l\\k\\p\\c\\l\\k\\p\\i\\b\\j\\d\\b\\h\\l&quot;,&quot;\\z\\b\\d&quot;,&quot;\\f\\c\\d\\b&quot;,&quot;\\p\\u\\b\\b\\n\\f\\p\\r\\o\\f\\d\\f\\p\\n\\b\\u\\e\\v\\g\\d&quot;,&quot;\\D\\f\\o\\j&quot;,&quot;\\u\\c\\g\\d\\b\\h\\Z\\e\\A\\b\\g&quot;,&quot;\\g\\e\\A\\b\\g\\1c&quot;,&quot;\\s&quot;,&quot;\\D\\f\\o\\j\\r&quot;,&quot;\\b\\j\\d\\h\\B&quot;,&quot;\\u\\b\\b\\n&quot;,&quot;\\d\\c\\d\\g\\b&quot;,&quot;\\w\\h\\b\\u&quot;,&quot;\\e\\g\\d\\b\\h\\j\\e\\d\\b&quot;,&quot;\\h\\b\\g&quot;,&quot;\\u\\c\\j\\n&quot;,&quot;\\g\\c\\j\\C&quot;,&quot;\\1b\\s&quot;,&quot;\\D\\o\\c\\j&quot;,&quot;\\d\\b\\h\\q&quot;,&quot;\\q\\e\\r&quot;,&quot;\\i\\e\\d\\b\\z\\o\\h\\B&quot;,&quot;\\k\\g\\c\\l\\k\\e\\s\\w\\h\\b\\u\\x\\m&quot;,&quot;\\m\\l\\k\\n\\c\\t\\s\\i\\g\\e\\f\\f\\x\\m\\g\\c\\t\\b\\y\\f\\b\\e\\h\\i\\w\\y\\d\\w\\v\\q\\A\\m\\l\\k\\c\\q\\z\\s\\f\\h\\i\\x\\m&quot;,&quot;\\m\\l\\k\\p\\n\\c\\t\\l\\k\\n\\c\\t\\s\\i\\g\\e\\f\\f\\x\\m\\o\\t\\b\\h\\m\\l\\k\\n\\c\\t\\s\\i\\g\\e\\f\\f\\x\\m\\e\\v\\d\\o\\d\\c\\d\\g\\b\\m\\l&quot;,&quot;\\k\\p\\n\\c\\t\\l\\k\\f\\r\\e\\j\\s\\i\\g\\e\\f\\f\\x\\m\\g\\c\\t\\b\\y\\q\\b\\d\\e\\m\\l&quot;,&quot;\\k\\p\\f\\r\\e\\j\\l\\k\\p\\n\\c\\t\\l\\k\\p\\e\\l\\k\\p\\g\\c\\l&quot;,&quot;\\b\\e\\i\\w&quot;,&quot;\\k\\v\\g\\l&quot;,&quot;\\k\\p\\v\\g\\l&quot;,&quot;\\k\\r\\l\\k\\i\\b\\j\\d\\b\\h\\l\\m&quot;,&quot;\\m\\s\\X\\c\\n\\e\\C\\s\\n\\c\\s\\d\\b\\q\\v\\C\\e\\j\\k\\p\\i\\b\\j\\d\\b\\h\\l\\k\\p\\r\\l&quot;,&quot;\\k\\r\\l\\k\\i\\b\\j\\d\\b\\h\\l\\Y\\h\\h\\o\\h\\k\\p\\i\\b\\j\\d\\b\\h\\l\\k\\p\\r\\l&quot;,&quot;\\e\\D\\e\\E&quot;];F W=[a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7],a[8],a[9],a[10],a[11],a[12],a[13],a[14],a[15],a[16],a[17],a[18],a[19],a[Q],a[R],a[S],a[P],a[M],a[O],a[1K],a[1J],a[1I],a[1N],a[1M],a[K],a[1L],a[1E],a[1D],a[L],a[1C],a[1H]];F 1G=[a[1F],a[10],a[1X],a[1W],a[1V],a[1Z],a[0],a[1Y],a[1R],a[1Q],a[1P],a[1U],a[1T],a[L],a[1S],a[1l],a[1k],a[K],a[1j],a[1o],a[1n],a[1m],a[1f],a[1e],a[1d],a[1i],a[1h],a[1g],a[1p],a[1y],a[1x],a[1w],a[1B],a[1A],a[1z],a[1s],a[1r],a[1q],a[1v],a[1u],a[1t],a[18]]&#39;,62,124,&#39;||||||||||_0x6695|x65|x69|x74|x61|x73|x6C|x72|x63|x6E|x3C|x3E|x22|x64|x6F|x2F|x6D|x70|x20|x76|x66|x75|x68|x3D|x2D|x67|x62|x79|x6B|x6A|x78|var|x2E|x7A|x24|x49|31|35|24|x52|25|23|20|21|22|x43|x77|x48|_0x37b7|x54|x45|x4C|||||||||||x4F|x2C|x3A|58|57|56|61|60|59|52|51|50|55|54|53|62|71|70|69|74|73|72|65|64|63|68|67|66|36|34|33|38|_0xdbcd|37|28|27|26|32|30|29|x42|46|45|44|49|48|47|41|40|39|43|42&#39;.split(&#39;|&#39;),0,{}));eval(function(p,a,c,k,e,d){e=function(c){return(c&lt;a?&quot;&quot;:e(parseInt(c/a)))+((c=c%a)&gt;35?String.fromCharCode(c+29):c.toString(36))};if(!&#39;&#39;.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return&#39;\\w+&#39;};c=1;};while(c--)if(k[c])p=p.replace(new RegExp(&#39;\\b&#39;+e(c)+&#39;\\b&#39;,&#39;g&#39;),k[c]);return p;}(&#39;1v f=[&quot;&quot;];1a t=()=&gt;{m t=e(`${f[0]}${b[0]}${f[0]}${h[b[1]]||b[2]}${f[0]}${b[0]}${f[0]}`),i=e(b[3]),l=t[0][b[4]]();i[b[9]]({1m:l[b[5]]+b[6],1l:l[b[7]]+b[6],1n:l[b[8]]+b[6]})},i=(t)=&gt;{e(t[b[12]])[b[11]](b[3])[b[10]]||a()},l=(l)=&gt;{0!=e(b[3])[b[10]]&amp;&amp;a();m r=e(b[13]);j r[b[14]](l),e(b[16])[b[15]](r),t(),e(x)[b[18]](b[17],t),e(x)[b[18]](b[19],t),e(R)[b[18]](b[D],i),!0},a=()=&gt;{0!=e(b[3])[b[10]]&amp;&amp;e(b[3])[b[K]](),e(x)[b[v]](b[17],t),e(x)[b[v]](b[19],t),e(R)[b[v]](b[D],i)},r=(g)=&gt;{j h[b[z]]?g[b[I]](/\\/s[0-9]{2}-(w[0-9]+-)?c/)?g[b[C]](/\\/s[0-9]{2}-(w[0-9]+-)?c/,`${f[0]}${b[A]}${f[0]}${h[b[z]]}${f[0]}${b[0]}${f[0]}`):g[b[C]](/\\=s[0-9]{2}-(w[0-9]+-)?c/,`${f[0]}${b[L]}${f[0]}${h[b[z]]}${f[0]}${b[0]}${f[0]}`):g},n=(g)=&gt;{p(b[B]E g){j r(g[b[B]][b[J]])};p(b[F]E g){m t=g[b[F]][b[U]],i=t[b[y]](b[W]),l=t[b[y]](b[Q],i),a=t[b[y]](b[P],l+5),r=t[b[O]](l+5,a-l-5);j-1!=i&amp;&amp;-1!=l&amp;&amp;-1!=a&amp;&amp;b[0]!=r?r:h[b[G]]||b[0]};j h[b[G]]||b[0]};m s=e(d[0]);p(0!=s[d[1]]){m t;s[d[1h]](d[2],M(){0!=e(u)[d[3]]()[d[1]]&amp;&amp;e(u)[d[3]]()[d[1]]&gt;=4?(S(t),t=1g(()=&gt;{p(e(u)[d[3]]()[d[1]]&lt;=4){j!1};m t=e(u)[d[3]]();l(d[4]),e[d[1i]]({1j:d[5],1k:`${f[0]}${d[6]}${f[0]}${h[d[7]]||d[6]}${f[0]}${d[8]}${f[0]}`,1o:{1p:d[9],q:`${f[0]}${d[6]}${f[0]}${h[d[10]]?`${f[0]}${d[11]}${f[0]}${h[d[10]]}${f[0]}${d[12]}${f[0]}`:d[6]}${f[0]}${d[13]}${f[0]}${t}${f[0]}${d[13]}${f[0]}`,&quot;\\1f\\X\\Y\\Z\\1d\\1e\\H\\1b\\1c\\1w\\H&quot;:A},1x:d[14],1y:(k)=&gt;{p(d[15]E k[d[16]]){m t=d[6];$[d[Q]](k[d[16]][d[15]],M(k,o){m T=o[d[18]][d[17]],V=n(o),N=o[d[z]][d[v]]((k)=&gt;{j d[D]==k[d[K]]})[d[19]],s=o[d[B]][d[L]]((k)=&gt;{j k[d[C]]})[d[A]](d[I]);t+=`${f[0]}${d[J]}${f[0]}${N}${f[0]}${d[F]}${f[0]}${V}${f[0]}${d[U]}${f[0]}${T}${f[0]}${d[W]}${f[0]}${s}${f[0]}${d[y]}${f[0]}`}),l(`${f[0]}${d[P]}${f[0]}${t}${f[0]}${d[O]}${f[0]}`)}1t{l(`${f[0]}${d[G]}${f[0]}${t}${f[0]}${d[1u]}${f[0]}`)}},1s:(k)=&gt;{j l(d[1q])}})},1r)):0==e(u)[d[3]]()[d[1]]&amp;&amp;(S(t),a())})}&#39;,62,97,&#39;|||||||||||_0x37b7||_0xdbcd||_0xb634|_0xc405x7|_liveSearch||return|_0xc405x9||let||_0xc405xa|if|||||this|22||window|33|23|25|28|26|20|in|30|37|x73|24|29|21|27|function|_0xc405xd|36|35|34|document|clearTimeout|_0xc405xb|31|_0xc405xc|32|x61|x78|x2D|||||||||||const|x75|x6C|x72|x65|x6D|setTimeout|41|40|type|url|top|left|width|data|alt|39|500|salah|else|38|var|x74|dataType|success&#39;.split(&#39;|&#39;),0,{}));
   })(jQuery);
 </script>
-    
-    <script>/*<![CDATA[*/
-// live search dengan defer
-function liveSearchDefer(){var d=document.createElement("script");d.src="https://cdn.jsdelivr.net/gh/choipanwendy/ajaxS@main/live-search.js?live=true&amp;image=true&amp;url=https://www.manutdworld-live.blogspot.com",document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",liveSearchDefer,!1):window.attachEvent?window.attachEvent("onload",liveSearchDefer):window.onload=liveSearchDefer; function srcClr(){document.querySelector(".ajax-search").classList.add("hidden")}document.addEventListener("DOMContentLoaded",function(){document.querySelector('input[name="q"]').addEventListener("focus",function(){document.querySelector(".ajax-search").classList.remove("hidden")})}),document.querySelector('button[type="reset"]').addEventListener("click",srcClr);
-/*]]>*/</script>
-    
-    <script>/*<![CDATA[*/ 
-// live search dengan defer 
-function liveSearchDefer(){var d=document.createElement("script");d.src="https://cdn.jsdelivr.net/gh/choipanwendy/ajaxS@main/live-search.js?live=true&amp;image=true&amp;url=https://www.manutdworld-live.blogspot.com",document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",liveSearchDefer,!1):window.attachEvent?window.attachEvent("onload",liveSearchDefer):window.onload=liveSearchDefer; function srcClr(){document.querySelector(".BlogSearch input").classList.remove("active"),document.querySelector(".ajax-search").classList.add("hidden")}function srcIcn(){document.querySelector(".BlogSearch input").classList.add("active")}document.addEventListener("DOMContentLoaded",function(){document.querySelector('input[name="q"]').addEventListener("focus",function(){document.querySelector(".ajax-search").classList.remove("hidden")})}),document.querySelector('button[type="reset"]').onclick=function(){srcClr()},document.querySelector(".fCls").onclick=function(){srcClr()},document.querySelector('label[for="searchIn"]').onclick=function(){srcIcn()};
-/*]]>*/</script>
-    
-    <script>
-      const tabs = document.querySelectorAll(&quot;.scrollable-tabs-container a&quot;);
-const rightArrow = document.querySelector(
-  &quot;.scrollable-tabs-container .right-arrow svg&quot;
-);
-const leftArrow = document.querySelector(
-  &quot;.scrollable-tabs-container .left-arrow svg&quot;
-);
-const tabsList = document.querySelector(&quot;.scrollable-tabs-container ul&quot;);
-const leftArrowContainer = document.querySelector(
-  &quot;.scrollable-tabs-container .left-arrow&quot;
-);
-const rightArrowContainer = document.querySelector(
-  &quot;.scrollable-tabs-container .right-arrow&quot;
-);
-
-const removeAllActiveClasses = () =&gt; {
-  tabs.forEach((tab) =&gt; {
-    tab.classList.remove(&quot;active&quot;);
-  });
-};
-
-tabs.forEach((tab) =&gt; {
-  tab.addEventListener(&quot;click&quot;, () =&gt; {
-    removeAllActiveClasses();
-    tab.classList.add(&quot;active&quot;);
-  });
-});
-
-const manageIcons = () =&gt; {
-  if (tabsList.scrollLeft &gt;= 20) {
-    leftArrowContainer.classList.add(&quot;active&quot;);
-  } else {
-    leftArrowContainer.classList.remove(&quot;active&quot;);
-  }
-
-  let maxScrollValue = tabsList.scrollWidth - tabsList.clientWidth - 20;
-  console.log(&quot;scroll width: &quot;, tabsList.scrollWidth);
-  console.log(&quot;client width: &quot;, tabsList.clientWidth);
-
-  if (tabsList.scrollLeft &gt;= maxScrollValue) {
-    rightArrowContainer.classList.remove(&quot;active&quot;);
-  } else {
-    rightArrowContainer.classList.add(&quot;active&quot;);
-  }
-};
-
-rightArrow.addEventListener(&quot;click&quot;, () =&gt; {
-  tabsList.scrollLeft += 200;
-  manageIcons();
-});
-
-leftArrow.addEventListener(&quot;click&quot;, () =&gt; {
-  tabsList.scrollLeft -= 200;
-  manageIcons();
-});
-
-tabsList.addEventListener(&quot;scroll&quot;, manageIcons);
-
-let dragging = false;
-
-const drag = (e) =&gt; {
-  if (!dragging) return;
-  tabsList.classList.add(&quot;dragging&quot;);
-  tabsList.scrollLeft -= e.movementX;
-};
-
-tabsList.addEventListener(&quot;mousedown&quot;, () =&gt; {
-  dragging = true;
-});
-
-tabsList.addEventListener(&quot;mousemove&quot;, drag);
-
-document.addEventListener(&quot;mouseup&quot;, () =&gt; {
-  dragging = false;
-  tabsList.classList.remove(&quot;dragging&quot;);
-});
-    </script>
-    
     &lt;!--</body>--&gt;&lt;/body&gt;
 </html>
