@@ -1919,7 +1919,7 @@ document.onkeydown=function(e){e=e||window.event;if(e.keyCode==123||e.keyCode==1
     &lt;/a&gt;
 
     &lt;!-- Trakteer --&gt;
-    &lt;a href=&#39;https://trakteer.id/mu-livestream&#39; rel=&#39;nofollow noopener&#39; target=&#39;_blank&#39; title=&#39;Donasi via Trakteer&#39;&gt;
+    &lt;a href=&#39;https://trakteer.id/mu-livestream/tip?quantity=1&#39; rel=&#39;nofollow noopener&#39; target=&#39;_blank&#39; title=&#39;Donasi via Trakteer&#39;&gt;
       &lt;img alt=&#39;Trakteer&#39; src=&#39;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieH10_JoSMU6bR0eymYzdd72g0uFT1CccEli9AytGV94ybITvbRlRfB4xQwAtvht6vNvrl5OU80ocHiHYj36pvxdxdJHtPsh1bBujNTW0SrzlyxqCkIzHjTU1Ofvnlxu2QPnEPtd1aGNwgbDeU8AAkFk5kqatpTf1QxysTl_k-Y8P7EQN-Abo3L-cNww/s0/trakteer-igniel.png&#39; title=&#39;Trakteer&#39;/&gt;
       &lt;span&gt;Donasi via Trakteer&lt;/span&gt;
       &lt;svg viewbox=&#39;0 0 24 24&#39;&gt;&lt;path d=&#39;M13 11L21.2 2.80005&#39;/&gt;&lt;path d=&#39;M22 6.8V2H17.2&#39;/&gt;&lt;path d=&#39;M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13&#39;/&gt;&lt;/path&gt;&lt;/path&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -4591,25 +4591,7 @@ hs.src = (&#39;//s10.histats.com/js15_gif_as.js&#39;);
     </b:widget>
     <b:widget id='HTML16' locked='false' title='Dukungan' type='HTML' visible='true'>
       <b:widget-settings>
-        <b:widget-setting name='content'>&lt;script type=&#39;text/javascript&#39; src=&#39;https://cdn.trakteer.id/js/embed/trbtn.min.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;(function(){var trbtnId=trbtn.init(&#39;Dukung Kami&#39;,&#39;#be1e2d&#39;,&#39;https://trakteer.id/mu-livestream&#39;,&#39;https://cdn.trakteer.id/images/embed/trbtn-icon.png&#39;,&#39;22&#39;);trbtn.draw(trbtnId);})();&lt;/script&gt;
-&lt;style&gt;
-.widget-content{
-    padding-left: 5px;
-}
-a.trbtn {
-    display: inline-block!important;
-    padding: 5px 15px !important;
-    text-align: center !important;
-    border-radius: 10px;
-    cursor: pointer;
-    overflow-wrap: break-word;
-    vertical-align: middle;
-    border: 0 none #fff !important;
-    font-family: &#39;Quicksand&#39;,Helvetica,Century Gothic,sans-serif !important;
-    font-weight: 400!important;
-    font-size: 1.2rem !important;
-}
-&lt;/style&gt;</b:widget-setting>
+        <b:widget-setting name='content'><![CDATA[<a style="background: white;margin-left: 5px;border-radius: 5px; "href="https://trakteer.id/mu-livestream/tip?quantity=1" target='_blank'><strong style="margin: 5px;">Beri Donasi</strong></a>]]></b:widget-setting>
       </b:widget-settings>
       <b:includable id='main'>
   <b:include name='widget-title'/>
@@ -5039,7 +5021,7 @@ discountBtn.addEventListener(&quot;click&quot;, () =&gt; {
 });
     </script>
     
-    <!--Warning-->
+    <!--Warning>
 <script type='text/javascript'>
 const toastNotification = document.querySelector(&quot;.toast-notification&quot;);
 
@@ -5066,7 +5048,7 @@ document.onkeydown = function(e) {
             return false;
         }
 };
-</script>
+</script-->
     <!-- Back to top button -->
 <script>
 var btn = $(&#39;#totop&#39;);
