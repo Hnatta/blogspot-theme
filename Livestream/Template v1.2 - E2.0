@@ -2477,7 +2477,7 @@ var interval = setInterval(clock, 1000);
           <b:widget-settings>
             <b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
             <b:widget-setting name='display'>CLOUD</b:widget-setting>
-            <b:widget-setting name='selectedLabelsList'>Europa League,FA Cup,League Cup,Persahabatan,Premire League</b:widget-setting>
+            <b:widget-setting name='selectedLabelsList'>Champions League,Europa League,FA Cup,League Cup,Persahabatan,Premire League</b:widget-setting>
             <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
             <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
           </b:widget-settings>
@@ -3118,13 +3118,15 @@ isi content ini dengan 404. cari contoh 404 di codepen
                 <b:if cond='data:view.isMultipleItems'>
                   <div class='mb-10 flex jcsb' id='newest'>
                     <h2 class='lh-2 c-fff fw-500'>Terbaru</h2>
-                    <div class='flex aic'>                    
+                    <div class='flex aic'>
+                      <b:if cond='!data:view.isHomepage'>
                       <div class='flex aic tabs'>
                         <!--<a class='tablinks' href='/search'>All</a>-->
                         <a class='tablinks' href='/search/label/home'>Kandang</a>
                         <a class='tablinks' href='/search/label/away'>Tandang</a>
                         <!--<a class='tablinks' onclick='feelingLucky();'>Random</a>-->
                       </div>
+                      </b:if>
                       
                     </div>
                   </div>
@@ -4282,7 +4284,7 @@ button.login {
   <!---->     
 </b:includable>
         </b:widget>
-        <b:widget cond='data:view.isHomepage' id='HTML1' locked='true' title='Jadwal berikutnya' type='HTML' version='2' visible='false'>
+        <b:widget cond='data:view.isHomepage' id='HTML1' locked='true' title='Jadwal berikutnya' type='HTML' version='2' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;style&gt;
 ::-webkit-scrollbar {
@@ -4306,7 +4308,7 @@ button.login {
   border: 2px solid rgba(255, 255, 255, 0.5);
 }
 &lt;/style&gt;
-&lt;div class=&quot;scheduled&quot;&gt;
+&lt;!--div class=&quot;scheduled&quot;&gt;
 
 &lt;a href=&quot;&quot;&gt;
         &lt;time&gt;12 Juli 2023     &lt;/time&gt;
@@ -4350,7 +4352,7 @@ button.login {
         &lt;center&gt;&lt;button&gt;&lt;b:includable name=&#39;jam-icon&#39;/&gt;08:00 WIB&lt;/b:includable&gt;&lt;/button&gt;&lt;/center&gt;
     &lt;/a&gt;
 
-&lt;/div&gt;</b:widget-setting>
+&lt;/div--&gt;</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
             <div class='head'>
@@ -5053,6 +5055,17 @@ window.addEventListener(&quot;contextmenu&quot;, (e) =&gt; {
   e.preventDefault();
   showNotification();
 });
+</script>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js' type='text/javascript'/>
+    <script language='javascript' type='text/javascript'> $(function () { $(this).bind(&quot;contextmenu&quot;, function (e) { e.preventDefault(); }); }); </script>
+   <script>
+document.onkeydown = function(e) {
+        if (e.ctrlKey &amp;&amp;
+            (e.keyCode === 85 )) {
+            return false;
+        }
+};
 </script>
     <!-- Back to top button -->
 <script>
