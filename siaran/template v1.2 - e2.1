@@ -2496,9 +2496,9 @@ var interval = setInterval(clock, 1000);
   <b:include name='content'/>
 </b:includable>
           <b:includable id='content'>
-  <div class='widget-content'>
+  <div class='widget-content' style='overflow:auto; width:ancho; height:300px;'>
     
-    <div style='overflow:auto; width:ancho; height:300px;'>
+    <div>
     <div id='ArchiveList'>
       <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
         <b:include cond='data:this.style == &quot;HIERARCHY&quot;' name='hierarchy'/>
